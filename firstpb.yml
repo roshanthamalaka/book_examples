@@ -1,0 +1,23 @@
+---
+- name: Simple Playbooks
+  hosts: node1
+  tasks: 
+      - name: Update all packages in the Server 
+        ansible.builtin.dnf:
+           name: "*"
+           state: latest
+
+      - name: Install Apache
+        ansible.builtin.dnf:
+           name: httpd
+           state: present
+
+      - name: Start the APache Service 
+        ansible.builtin.service:
+           name: httpd
+           state: started
+
+      - name: Enable the APache Service 
+        ansible.builtin.service:
+           name: httpd    
+           enabled: yes
