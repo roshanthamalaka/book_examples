@@ -1,0 +1,12 @@
+---
+- name: Playbook Variable Example2
+  hosts: node1
+  vars_files:
+      - variable_external.yml
+
+  tasks:
+    - name: Install package
+      ansible.builtin.dnf:
+        name: "{{ package }}"
+        state: present
+
