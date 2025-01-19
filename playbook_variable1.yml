@@ -1,0 +1,12 @@
+---
+- name: Playbook Variable Example1
+  hosts: localhost
+  vars:
+    package: vim
+
+  tasks:
+    - name: Install package
+      ansible.builtin.dnf:
+        name: "{{ package }}"
+        state: present
+
