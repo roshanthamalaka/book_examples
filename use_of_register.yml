@@ -1,0 +1,12 @@
+---
+- name: Use Register Variable Example 
+  hosts: node1
+  tasks: 
+    - name: Create User 
+      ansible.builtin.user:
+        name: johnd
+        comment: John Doe
+      register: result
+
+    - debug: 
+        var: result
