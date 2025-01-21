@@ -3,3 +3,6 @@
 
 [node2]
 172.16.0.4
+
+[webservers]
+localhost
