@@ -1,0 +1,23 @@
+---
+- name: Exampe of Facts 
+  hosts: node1
+  tasks: 
+
+     - name: Add Content to the File  
+       ansible.builtin.shell: | 
+         echo "Free Memomry: freem" > /tmp/meminfo.txt 
+
+     - name: Replace the file content with  free memory ansible facts
+       ansible.builtin.replace:
+          path: /tmp/meminfo.txt
+          regexp: 'freem'
+          replace: "{{ ansible_facts['memtotal_mb'] }}"
+
+     - name: Get the File Content
+       ansible.builtin.shell: |
+            cat /tmp/meminfo.txt
+       register: result
+
+     - name: View the File Content
+       debug: 
+          var: result
