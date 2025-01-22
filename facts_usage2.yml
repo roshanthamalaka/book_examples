@@ -1,0 +1,14 @@
+---
+- name: Example use of facts when facts has multiple values
+  hosts: node1
+  tasks: 
+
+     - name: View Used memory in the node using newer method
+       debug: 
+          msg: 
+              - "Used memory in the node is: {{ ansible_facts['memory_mb']['real']['used'] }}"
+      
+     - name: View Used memory in the node using older method
+       debug: 
+          msg: 
+            - "Used memory in the node is: {{ ansible_memory_mb.real.used }}"

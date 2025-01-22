@@ -11,7 +11,7 @@
        ansible.builtin.replace:
           path: /tmp/meminfo.txt
           regexp: 'freem'
-          replace: "{{ ansible_facts['memfree_mb'] }}" 
+          replace: "{{ ansible_memfree_mb }}" 
 
      - name: Get the File Content
        ansible.builtin.shell: |
