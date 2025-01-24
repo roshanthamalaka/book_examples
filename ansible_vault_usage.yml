@@ -1,0 +1,11 @@
+---
+- name: Create user with encrypted file in Ansible Vault 
+  hosts: node1
+  vars_files: 
+     - userpassword.yml # This file is encrypted with Vault 
+  
+  tasks: 
+      - name: Create User John
+        ansible.builtin.user:
+          name: "john"
+          password: "{{ johnpassword | password_hash('sha512') }}" 
