@@ -1,0 +1,27 @@
+---
+- name: Use of Simple Loop
+  hosts: node1
+  vars: 
+    userlist1:
+        - john
+        - ben 
+        - paul
+    packages: [telnet,ftp]
+  tasks: 
+     - name: Using Loop key word and use of item to store value
+       ansible.builtin.user:
+              name: "{{ item }}"
+       loop: 
+            - mahinda 
+            - ranil 
+            - namal
+
+     - name: Call vairable with Loop Parameter
+       ansible.builtin.user:
+              name: "{{ item }}"
+       loop: "{{ userlist1 }}"
+
+     - name: Use Variable directly without Loop Parameter
+       ansible.builtin.yum:
+              name: "{{ packages }}"
+              state: present 
