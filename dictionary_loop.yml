@@ -1,0 +1,26 @@
+---
+- name: Iterate Over dictionary variable 
+  hosts: node1
+  vars_files: 
+      - userlist.yml
+
+  tasks: 
+      - name: Create Users Over Iterate through dictionary
+        ansible.builtin.user: 
+              name: "{{ item.Username }}"
+              comment: "{{ item.Description }}"
+        loop: "{{ Users }}"
+
+      - name: Create Users when specified dicitionary in Loop Parameter
+        ansible.builtin.user:
+              name: "{{ item.username }}"
+              comment: "{{ item.description }}"
+        loop: 
+            - username: Cruise
+              description: Network Engineer
+
+            - username: Smitty
+              description: DevOps Engineer
+
+            - username: Kumar
+              description: System Engineer 
