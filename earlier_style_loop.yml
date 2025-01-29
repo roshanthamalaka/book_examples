@@ -1,0 +1,10 @@
+---
+- name: Earlier Style Loop Usage 
+  hosts: node1
+  vars: 
+     users: ['user1','user2','user3']
+  tasks: 
+     - name: Earlier Style Loop Example 
+       ansible.builtin.user: 
+            name: "{{ item }}"
+       with_items: "{{ users }} "
