@@ -1,0 +1,19 @@
+---
+- name: Example Use of Conditions 
+  hosts: node1,node2 
+  vars: 
+      packages: [vim,telnet]
+  tasks:
+      - name: Install On RedHat Based Systems 
+        ansible.builtin.dnf: 
+            name: "{{ item }}"
+            state: present
+        loop: "{{ packages }}"
+        when: ansible_facts['os_family'] == "RedHat"
+
+      - name: Install On Ubuntu Based Systems
+        ansible.builtin.apt: 
+            name: "{{ item }}"
+            state: present
+        loop: "{{ packages }}"
+        when: ansible_facts['os_family'] == "Debian"
