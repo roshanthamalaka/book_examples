@@ -1,0 +1,29 @@
+---
+- name: File management Examples 
+  hosts: node1
+  tasks: 
+      - name: Create a File on remote host 
+        ansible.builtin.file: 
+            path: /tmp/myfile.txt
+            owner: john
+            group: john
+            mode: '0600'
+            state: touch
+
+      - name: Copy File From Local to remote host 
+        ansible.builtin.copy:
+          src: example.txt 
+          dest: /tmp/example.txt
+
+      - name: Edit example.txt 
+        ansible.builtin.blockinfile:
+          path: /tmp/example.txt
+          block: | 
+            Added by Ansible 
+            Contains multiple lines
+
+      - name: Replace line in exsisting file
+        ansible.builtin.lineinfile:
+         path: /tmp/example.txt
+         regexp: 'This is demo file.'
+         line: This is the final configuration
