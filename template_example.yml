@@ -1,0 +1,12 @@
+---
+- name: Deploy Banner using Ansible Template Example
+  hosts: node1,node2
+
+  tasks: 
+      - name: Configure Login Banner 
+        ansible.builtin.template:
+          src: message.j2 # Use relative path because file is in the same location
+          dest: /etc/motd 
+          owner: root
+          group: root
+          mode: 0644

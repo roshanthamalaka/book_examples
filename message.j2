@@ -1,0 +1,10 @@
+Welcome to the server {{ ansible_facts['hostname'] }}
+Unautorized access to the server is strictly prohibited. 
+
+Server operating system is {{ ansible_facts['distribution'] }} version  {{ ansible_facts['distribution_version'] }}
+
+Memory allocated {{ ansible_facts['memtotal_mb'] }}
+
+Today Date {{ ansible_facts['date_time']['date'] }}
+
+Login Time {{ ansible_facts['date_time']['time'] }}
