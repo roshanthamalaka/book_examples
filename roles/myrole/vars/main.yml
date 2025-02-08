@@ -1,0 +1,4 @@
+---
+# vars file for roles/myrole
+# \
+mesage: "Default Message if Nothing was provided by the Playbook Execution"

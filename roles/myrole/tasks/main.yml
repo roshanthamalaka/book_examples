@@ -1,0 +1,48 @@
+---
+# tasks file for roles/myrole
+
+- name: Install Latest Version of Apache if server is RedHat Based Distros
+  ansible.builtin.dnf:
+    name: httpd
+    state: latest
+  when: ansible_facts['os_family'] == "RedHat"
+
+- name: Install Latest Version of Apache if server is Debian Based Distro
+  ansible.builtin.apt:
+    name: apache2
+    state: latest
+  when: ansible_facts['os_family'] == "Debian"
+
+- name: Start and Enable the Apache Service if the server is Redhat
+  ansible.builtin.service:
+    name: httpd
+    state: started
+    enabled: yes
+  when: ansible_facts['os_family'] == "RedHat"
+
+- name: Start and Enable the Apache Service if the server is Debian
+  ansible.builtin.service:
+    name: apache2                              
+    state: started
+    enabled: yes
+  when: ansible_facts['os_family'] == "Debian"
+
+- name: Copy the Home page to the /var/www/html if server version is Redhat
+  ansible.builtin.template: 
+    src:  templates/homepage.j2
+    dest: /var/www/html/index.html
+  notify:  Restart Apache Redhat
+  when: ansible_facts['os_family'] == "RedHat"
+
+- name: Copy the Home page to the /var/www/html if server version is Debian
+  ansible.builtin.template:
+    src:  templates/homepage.j2
+    dest: /var/www/html/index.html
+  notify:  Restart Apache Ubuntu
+  when: ansible_facts['os_family'] == "Debian"
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+---
+# handlers file for roles/myrole
+- name: Restart Apache Redhat
+  ansible.builtin.service:
+    name: httpd
+    state: restarted
+
+- name: Restart Apache Ubuntu
+  ansible.builtin.service:
+    name: apache2
+    state: restarted
+

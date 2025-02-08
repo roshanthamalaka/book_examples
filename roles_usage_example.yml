@@ -1,0 +1,7 @@
+---
+- name: Custom Role usage Example
+  hosts: node1,node2
+  vars: 
+      message: "This server was configured using Ansible for Demo Purpose"
+  roles: 
+      - myrole
