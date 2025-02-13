@@ -1,0 +1,26 @@
+---
+#
+# A:Platform64 / Ansible role settings / Site: {{ auto_ansible_control_site }}
+#
+# * Role settings are available only for the corresponding host group and associated playbook
+#
+
+hpv_libvirt_server_application:
+  name: "libvirt_server"
+  type: "distro"
+  version: "latest"
+  installed: true
+
+hpv_libvirt_server_subsystem:
+  enabled: true
+  status: "started"
+
+hpv_libvirt_server_server_options:
+  tcp_access:
+    enabled: true
+    port: "16509"
+    listen: "127.0.0.1"
+    cleartext: false
+  qemu:
+    security_driver: false
+...

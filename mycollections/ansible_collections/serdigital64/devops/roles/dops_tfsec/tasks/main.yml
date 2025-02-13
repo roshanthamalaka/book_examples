@@ -1,0 +1,16 @@
+---
+- name: "DevOps / TFSec / Initialize"
+  ansible.builtin.include_tasks:
+    file: "dops_tfsec_initialize.yml"
+
+- name: "DevOps / TFSec / Deploy"
+  ansible.builtin.include_tasks:
+    file: "dops_tfsec_deploy.yml"
+  when:
+    - dops_tfsec['deploy'] is defined
+    - dops_tfsec['deploy']
+
+- name: "DevOps / TFSec / Finalize"
+  ansible.builtin.include_tasks:
+    file: "dops_tfsec_finalize.yml"
+...

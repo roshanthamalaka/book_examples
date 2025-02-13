@@ -1,0 +1,9 @@
+---
+- name: "Security / Key / SSH / Initialize / Check Platform compatibility ({{
+    ansible_distribution + ansible_distribution_major_version }})"
+  ansible.builtin.assert:
+    quiet: true
+    fail_msg: "Target Platform not supported: {{ ansible_distribution + ansible_distribution_major_version }}"
+    that:
+      - ansible_distribution + ansible_distribution_major_version in sec_key_ssh_platforms
+...

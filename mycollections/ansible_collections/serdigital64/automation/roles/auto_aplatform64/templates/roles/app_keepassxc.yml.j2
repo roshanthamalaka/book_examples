@@ -1,0 +1,18 @@
+#
+# A:Platform64 / Ansible role settings / Site: {{ auto_ansible_control_site }}
+#
+# * Role settings are available only for the corresponding host group and associated playbook
+#
+
+app_keepassxc_application:
+  name: "keepassxc"
+  type: "distro"
+  installed: true
+  version: "latest"
+
+app_keepassxc_actions:
+  setup:
+    overwrite: false
+
+app_keepassxc_setup_users: []
+...

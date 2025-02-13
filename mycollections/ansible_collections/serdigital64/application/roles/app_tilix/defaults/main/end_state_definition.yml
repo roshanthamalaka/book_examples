@@ -1,0 +1,10 @@
+---
+app_tilix_application:
+  name: "tilix"
+  type: "distro"
+  version: "latest"
+  installed: true
+
+app_tilix_dconf:
+  tilix: "p10k_v1"
+...

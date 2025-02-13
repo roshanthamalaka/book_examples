@@ -1,0 +1,14 @@
+---
+- name: "DevOps / GitLab / Server / Setup / Server / Configure daemon"
+  become: true
+  ansible.builtin.template:
+    backup: false
+    follow: false
+    force: true
+    unsafe_writes: false
+    owner: "{{ dops_gitlab_server_base['access']['user']['owner'] }}"
+    group: "{{ dops_gitlab_server_base['access']['group']['owner'] }}"
+    mode: "{{ dops_gitlab_server_base['access']['mode']['private'] }}"
+    src: "{{ dops_gitlab_server_base['templates']['gitlab_rb'] }}"
+    dest: "{{ dops_gitlab_server_base['etc']['gitlab_rb'] }}"
+...

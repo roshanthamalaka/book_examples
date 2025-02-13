@@ -1,0 +1,16 @@
+---
+- name: "DevOps / GitLab / Server / Control / Check required parameters"
+  ansible.builtin.assert:
+    fail_msg: "Required end-state parameters are missing ({{ dops_gitlab_server_subsystem | default('dops_gitlab_server_subsystem') }})"
+    quiet: true
+    that:
+      - dops_gitlab_server_subsystem is defined
+      - dops_gitlab_server_subsystem | length > 0
+      - dops_gitlab_server_subsystem['enabled'] is defined
+      - dops_gitlab_server_subsystem['status'] is defined
+      - dops_gitlab_server_subsystem['status'] | length > 0
+
+- name: "DevOps / GitLab / Server / Control / Subsystem"
+  ansible.builtin.include_tasks:
+    file: "{{ 'dops_gitlab_server_control_subsystem-' + dops_gitlab_server_os_family + '.yml' }}"
+...

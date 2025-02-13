@@ -1,0 +1,17 @@
+---
+dops_gitlab_server_application:
+  name: "gitlab_server"
+  type: "distro"
+  version: "v14"
+  installed: true
+
+dops_gitlab_server_subsystem:
+  enabled: false
+  status: "stopped"
+
+dops_gitlab_server_firewall:
+  zone: "public"
+
+dops_gitlab_server_server:
+  external_url: "gitlab.localdomain"
+...

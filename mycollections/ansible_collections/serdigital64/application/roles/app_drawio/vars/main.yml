@@ -1,0 +1,28 @@
+---
+app_drawio_platforms:
+  - "CentOS8"
+  - "RedHat8"
+  - "AlmaLinux8"
+  - "Rocky8"
+  - "OracleLinux8"
+  - "OracleLinux9"
+  - "Ubuntu20"
+  - "Ubuntu21"
+  - "Ubuntu22"
+  - "Fedora33"
+  - "Fedora35"
+  - "Fedora36"
+  - "Debian10"
+  - "Debian11"
+
+app_drawio_profiles:
+  snap:
+    latest:
+      packages:
+        - name: "drawio"
+  flatpak:
+    latest:
+      origin: "flathub"
+      packages:
+        - name: "com.jgraph.drawio.desktop"
+...

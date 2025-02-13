@@ -1,0 +1,12 @@
+---
+- name: "Automation / Ansible / Control / Prepare / User / Create"
+  vars:
+    sys_user:
+      setup: true
+    sys_user_accounts:
+      - name: "{{ auto_ansible_control_owners['control']['user'] }}"
+        home: "{{ auto_ansible_control_base['paths']['home'] }}"
+        group: "{{ auto_ansible_control_owners['control']['group'] }}"
+  ansible.builtin.include_role:
+    name: "serdigital64.system.sys_user"
+...

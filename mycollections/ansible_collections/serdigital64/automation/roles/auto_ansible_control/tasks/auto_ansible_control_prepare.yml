@@ -1,0 +1,9 @@
+---
+- name: "Automation / Ansible / Control / Prepare / User"
+  ansible.builtin.include_tasks:
+    file: "auto_ansible_control_prepare_user.yml"
+
+- name: "Automation / Ansible / Control / Prepare/ Paths"
+  ansible.builtin.include_tasks:
+    file: "auto_ansible_control_prepare_paths.yml"
+...

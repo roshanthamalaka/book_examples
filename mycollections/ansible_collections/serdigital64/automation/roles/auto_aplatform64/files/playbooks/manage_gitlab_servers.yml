@@ -1,0 +1,54 @@
+---
+- name: "Manage GitLab Servers"
+  hosts: "gitlab_servers"
+  gather_facts: false
+
+  pre_tasks:
+    - name: "Manage GitLab Servers / Discover Target Platform"
+      ansible.builtin.setup:
+        gather_subset: "min"
+
+    - name: "Manage GitLab Servers / Prepare package repositories"
+      vars:
+        sys_repository:
+          prepare: true
+          deploy: true
+          setup: true
+          provision: true
+      ansible.builtin.include_role:
+        name: "serdigital64.system.sys_repository"
+
+    - name: "Manage GitLab Servers / Prepare archive manager"
+      vars:
+        bkp_archive:
+          deploy: true
+      ansible.builtin.include_role:
+        name: "serdigital64.backup.bkp_archive"
+
+    - name: "Manage GitLab Servers / Prepare package installer"
+      vars:
+        sys_package:
+          prepare: true
+      ansible.builtin.include_role:
+        name: "serdigital64.system.sys_package"
+
+    - name: "Manage GitLab Servers / Prepare OS Firewall"
+      vars:
+        sec_firewall_os:
+          deploy: true
+      ansible.builtin.include_role:
+        name: "serdigital64.security.sec_firewall_os"
+
+  tasks:
+    - name: "Manage GitLab Servers / Provision GitLab Server"
+      vars:
+        dops_gitlab_server:
+          deploy: true
+          setup: true
+          control: true
+      ansible.builtin.include_role:
+        name: "serdigital64.devops.dops_gitlab_server"
+      when:
+        - gitlab_servers_apps['gitlab'] is defined
+        - gitlab_servers_apps['gitlab']
+...

@@ -1,0 +1,70 @@
+---
+- name: "Manage LibVirt servers"
+  hosts: "libvirt_servers"
+  gather_facts: false
+
+  pre_tasks:
+
+    - name: "Manage LibVirt servers / Discover Target Platform"
+      ansible.builtin.setup:
+        gather_subset: "min"
+
+    - name: "Manage LibVirt servers / Prepare package repositories"
+      vars:
+        sys_repository:
+          prepare: true
+          deploy: true
+          setup: true
+          provision: true
+      ansible.builtin.include_role:
+        name: "serdigital64.system.sys_repository"
+
+    - name: "Manage LibVirt servers / Prepare archive manager"
+      vars:
+        bkp_archive:
+          deploy: true
+      ansible.builtin.include_role:
+        name: "serdigital64.backup.bkp_archive"
+
+    - name: "Manage LibVirt servers / Prepare package installer"
+      vars:
+        sys_package:
+          prepare: true
+      ansible.builtin.include_role:
+        name: "serdigital64.system.sys_package"
+
+  tasks:
+
+    - name: "Manage LibVirt servers / Provision LibVirt Client"
+      vars:
+        hpv_libvirt_client:
+          deploy: true
+      ansible.builtin.include_role:
+        name: "serdigital64.hypervisor.hpv_libvirt_client"
+      when:
+        - libvirt_servers_apps['libvirt_client'] is defined
+        - libvirt_servers_apps['libvirt_client']
+
+    - name: "Manage LibVirt servers / Provision Kernel tools"
+      vars:
+        sys_kernel:
+          deploy: true
+      ansible.builtin.include_role:
+        name: "serdigital64.system.sys_kernel"
+      when:
+        - libvirt_servers_apps['kernel_tools'] is defined
+        - libvirt_servers_apps['kernel_tools']
+
+    - name: "Manage LibVirt servers / Provision LibVirt Server"
+      vars:
+        hpv_libvirt_server:
+          prepare: true
+          deploy: true
+          setup: true
+          control: true
+      ansible.builtin.include_role:
+        name: "serdigital64.hypervisor.hpv_libvirt_server"
+      when:
+        - libvirt_servers_apps['libvirt_server'] is defined
+        - libvirt_servers_apps['libvirt_server']
+...

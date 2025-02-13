@@ -1,0 +1,10 @@
+---
+- name: "DevOps / GitLab / Server / Control / Subsystem / Set state (service: {{
+    dops_gitlab_server_subsystem_profile['service'] }})"
+  become: true
+  changed_when: false
+  ansible.builtin.command:
+    argv:
+      - "{{ dops_gitlab_server_base['run']['gitlab_ctl'] }}"
+      - "{{ dops_gitlab_server_subsystem_profile['states'][dops_gitlab_server_subsystem['status']] }}"
+...

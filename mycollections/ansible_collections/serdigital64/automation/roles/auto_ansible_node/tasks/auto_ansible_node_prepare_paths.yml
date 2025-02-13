@@ -1,0 +1,17 @@
+---
+- name: "Automation / Ansible / Node / Prepare / Paths / Create base structure"
+  become: true
+  ansible.builtin.file:
+    follow: false
+    unsafe_writes: false
+    force: false
+    state: "directory"
+    owner: "{{ auto_ansible_node_base['access']['user']['owner'] }}"
+    group: "{{ auto_ansible_node_base['access']['group']['owner'] }}"
+    mode: "{{ auto_ansible_node_base['access']['mode']['dir'] }}"
+    path: "{{ auto_ansible_node___path }}"
+  loop:
+    - "{{ auto_ansible_node_paths['var'] }}"
+  loop_control:
+    loop_var: "auto_ansible_node___path"
+...

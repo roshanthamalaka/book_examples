@@ -1,0 +1,19 @@
+---
+auto_ansible_control_node: "localhost"
+auto_ansible_control_python: "/usr/bin/python3"
+auto_ansible_control_site: "site"
+
+auto_ansible_control_paths:
+  root: "/opt/sitectl"
+  var: "/var/opt/sitectl"
+
+auto_ansible_control_owners:
+  control:
+    user: "sitectl"
+    group: "sitectl"
+
+auto_ansible_control_key:
+  type: "ed25519"
+
+auto_ansible_control_managed: []
+...

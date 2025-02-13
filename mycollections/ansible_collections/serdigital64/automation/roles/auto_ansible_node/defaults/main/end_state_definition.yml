@@ -1,0 +1,9 @@
+---
+auto_ansible_node_paths:
+  var: "/var/opt/amnode"
+
+auto_ansible_node_owners:
+  node:
+    user: "amnode"
+    group: "amnode"
+...

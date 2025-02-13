@@ -1,0 +1,23 @@
+---
+#
+# A:Platform64 / Ansible role settings / Site: {{ auto_ansible_control_site }}
+#
+# * Role settings are available only for the corresponding host group and associated playbook
+#
+
+sys_repository_managers:
+  flatpak: false
+  snap: false
+  git: true
+
+sys_repository_custom_yum:
+  - name: "gitlab"
+    description: "GitLab repo"
+    url: "https://packages.gitlab.com/gitlab/gitlab-ee/el/8/$basearch"
+    gpgkey: "https://packages.gitlab.com/gitlab/gitlab-ee/gpgkey/gitlab-gitlab-ee-3D645A26AB9FBD22.pub.gpg"
+sys_repository_custom_apt: []
+
+sys_repository_catalog_yum:
+  gitlab: true
+sys_repository_catalog_apt: {}
+...

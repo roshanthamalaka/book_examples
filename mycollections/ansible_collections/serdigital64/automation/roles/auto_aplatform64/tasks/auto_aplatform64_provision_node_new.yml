@@ -1,0 +1,28 @@
+---
+- name: "Automation / A:Platform64 / Provision / Node / New / Register in inventory"
+  community.general.ini_file:
+    backup: false
+    create: false
+    exclusive: false
+    no_extra_spaces: false
+    unsafe_writes: false
+    allow_no_value: true
+    state: "present"
+    section: "aplatform64_nodes"
+    option: "{{ auto_aplatform64_bootstrap_node_fqdn }}"
+    path: "{{ auto_ansible_control_base['paths']['site_inventories'] + '/aplatform64_service.ini' }}"
+
+- name: "Automation / A:Platform64 / Provision / Node / New / Register SSH keys"
+  vars:
+    auto_ansible_control:
+      provision: true
+    auto_ansible_control_paths: "{{ auto_aplatform64_paths['control'] }}"
+    auto_ansible_control_owners: "{{ auto_aplatform64_owners }}"
+    auto_ansible_control_site: "{{ auto_aplatform64_site }}"
+    auto_ansible_control_node: "{{ auto_aplatform64_node }}"
+    auto_ansible_control_python: "{{ auto_aplatform64_python }}"
+    auto_ansible_control_managed:
+      - "{{ auto_aplatform64_bootstrap_node_fqdn }}"
+  ansible.builtin.include_role:
+    name: "serdigital64.automation.auto_ansible_control"
+...

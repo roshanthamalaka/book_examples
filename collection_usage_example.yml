@@ -1,0 +1,11 @@
+---
+- name: Collection Usage Example 
+  hosts: node2
+  tasks: 
+      - name: Install mysql client using custom collection
+        vars:
+          db_mysql_client:
+            resolve_prereq: true
+            deploy: true
+        ansible.builtin.include_role:
+            name: "serdigital64.database.db_mysql_client"

@@ -1,0 +1,5 @@
+---
+auto_ansible_node:
+  prepare: false
+  provision: false
+...

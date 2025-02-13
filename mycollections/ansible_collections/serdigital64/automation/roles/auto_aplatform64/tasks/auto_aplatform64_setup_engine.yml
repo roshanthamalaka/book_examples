@@ -1,0 +1,25 @@
+---
+- name: "Automation / Aplatform64 / Setup / Engine / Remove default ansible settings ({{
+    auto_ansible_control_base['files']['ansible_common'] }})"
+  become: true
+  changed_when: false # Required for idempotence when used from the playbook manage_aplatform64_servers
+  ansible.builtin.file:
+    follow: false
+    force: false
+    state: "absent"
+    path: "{{ auto_ansible_control_base['files']['ansible_common'] }}"
+
+- name: "Automation / Aplatform64 / Setup / Engine / Create site specific Ansible settings ({{
+    auto_aplatform64_base['files']['ansible_site_yml'] }})"
+  become: true
+  ansible.builtin.template:
+    backup: false
+    follow: false
+    force: true
+    unsafe_writes: false
+    owner: "{{ auto_ansible_control_base['access']['user']['owner'] }}"
+    group: "{{ auto_ansible_control_base['access']['group']['owner'] }}"
+    mode: "{{ auto_ansible_control_base['access']['mode']['file'] }}"
+    src: "{{ auto_aplatform64_base['templates']['ansible_site_yml'] }}"
+    dest: "{{ auto_aplatform64_base['files']['ansible_site_yml'] }}"
+...

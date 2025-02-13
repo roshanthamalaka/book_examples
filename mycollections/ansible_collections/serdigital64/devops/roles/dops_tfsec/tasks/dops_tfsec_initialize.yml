@@ -1,0 +1,15 @@
+---
+- name: "DevOps / TFSec / Initialize / Check Platform compatibility"
+  ansible.builtin.assert:
+    quiet: true
+    fail_msg: "Target Platform not supported: {{ ansible_distribution + ansible_distribution_major_version }}"
+    that:
+      - ansible_distribution + ansible_distribution_major_version in dops_tfsec_platforms
+
+- name: "DevOps / TFSec / Initialize / Resolve prerequisites"
+  ansible.builtin.include_tasks:
+    file: "dops_tfsec_prerequisite.yml"
+  when:
+    - dops_tfsec['resolve_prereq'] is defined
+    - dops_tfsec['resolve_prereq']
+...

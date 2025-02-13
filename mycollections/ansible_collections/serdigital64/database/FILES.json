@@ -1,0 +1,1104 @@
+{
+ "files": [
+  {
+   "name": ".",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "CODE_OF_CONDUCT.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "451c325897da04f1a8e5f3c116445a573fa5ab9ca3642420297e06dd87f22d2a",
+   "format": 1
+  },
+  {
+   "name": "LICENSE",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+   "format": 1
+  },
+  {
+   "name": "meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "meta/runtime.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b2025203e17c78b42566697044d5f0417a5b72ad1b99e8d5f42465596a3c2827",
+   "format": 1
+  },
+  {
+   "name": "playbooks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "playbooks/db_mariadb_client.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a5740984f296bdfacb9d339b96c15f8a7e5526cdec5ea28827193470fd2ffd15",
+   "format": 1
+  },
+  {
+   "name": "playbooks/db_mariadb_server.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e0a5a0c7e6b3ad79048e0a0f1f5bfe4fcf548038568a72114f56f977d10e8c67",
+   "format": 1
+  },
+  {
+   "name": "playbooks/db_mysql_client.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a28619a9c1944b78ef42fb11221ae8cd93c6f66fb6c1fa18a78235e10ee7db4f",
+   "format": 1
+  },
+  {
+   "name": "playbooks/db_mysql_server.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "12946107bf15d892384ecb2ae8dc92d1495ca062308d27d1734163c1312ae298",
+   "format": 1
+  },
+  {
+   "name": "playbooks/db_postgresql_client.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "29109502ecda2e67a90ba4066cd5602d9fa19ad25b667a910fc6a29ecc663849",
+   "format": 1
+  },
+  {
+   "name": "playbooks/db_postgresql_server.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "814caa2376f733360486a5dd1601e3360e7908c9d622d34d7bc19500190b9a7e",
+   "format": 1
+  },
+  {
+   "name": "roles",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_client",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_client/CODE_OF_CONDUCT.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "451c325897da04f1a8e5f3c116445a573fa5ab9ca3642420297e06dd87f22d2a",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_client/LICENSE",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_client/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_client/defaults/main",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_client/defaults/main/action_parameters.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e2cca90ae08510cec6e6868dae14a8bcb05755531edbb25601f32d2cfb57b4d8",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_client/defaults/main/end_state_definition.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f44e86d7b4fb75aef95f26726b3376dbab42039538d3c410e03c552b5d1125a9",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_client/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_client/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dabebadb7d489e30fda41de4481411354fb9bf4d4e87abf328c51b77ff766291",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_client/meta/requirements-dev.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d28bb558b944495c65c6cbe27609ea1e0b0c51e1341f5955f6835ac024265754",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_client/meta/requirements.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c27b671d86b23cd674d3df6faeeb0e6eec4bcea6d4e9bde56f7b5f3a7233c9b3",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_client/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_client/tasks/db_mariadb_client_deploy.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dba3f2166ae026f30b8354ed27eec72518788ddca66ecfab53a7382754fed570",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_client/tasks/db_mariadb_client_deploy_package.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "499fc2891b8f3fb1c1502d727fabef30a62ae4904f316a143318e4d1bd28ee9b",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_client/tasks/db_mariadb_client_finalize.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "580368549609ccf5985a0bc6cd63868f833666ae76eaef6c720cca0e9bb914d2",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_client/tasks/db_mariadb_client_initialize.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0a54b82dae8f7f1dd294357f0b21aa4ff9889630c0cc2c250c8e227359aa79f7",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_client/tasks/db_mariadb_client_prerequisite.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5e3716b76297aee56b4160f392b137992f8ae2709285774a423c149d6ddeeaa4",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_client/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a148f29a725aa3ec424e24c4fcd6c938736e7530a6eeeb1bb9bbd2a48cc4b4b2",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_client/vars",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_client/vars/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a6f750c42ad45b937f09243318cc09ce058837f9a4bc36f1813257b606fa4064",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_client/vars/platform-RedHat.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e41445882e2b6324dad9ffba6e67fd534ef48b09f579d55f4504beec6acd7776",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_client/vars/platform-Ubuntu.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "87b130f0a9115bbd27e1689b38eb6155e2cde242681468f6af9f976179f502a3",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_client/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "21595bbc2ccd31197f765f8c4fc74fcf61e99b646ad39b93b454dfcba3400829",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_server",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_server/CODE_OF_CONDUCT.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "451c325897da04f1a8e5f3c116445a573fa5ab9ca3642420297e06dd87f22d2a",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_server/LICENSE",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_server/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_server/defaults/main",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_server/defaults/main/action_parameters.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b5cb1a8a9adb5666a0eec0a37d5c693fc86116e50dc30e076cbc70e4d89c2d36",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_server/defaults/main/end_state_definition.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5494be38031b37f48a51839dc4c0f4bc9034dc05810c91178eb6a395ef03631d",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_server/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_server/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "687816a2482f4633daeb553645465aac31e13907400c77f3f0190e8390ef31e0",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_server/meta/requirements-dev.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d28bb558b944495c65c6cbe27609ea1e0b0c51e1341f5955f6835ac024265754",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_server/meta/requirements.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c27b671d86b23cd674d3df6faeeb0e6eec4bcea6d4e9bde56f7b5f3a7233c9b3",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_server/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_server/tasks/db_mariadb_server_deploy.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e481f932ed5b5dddbf199f83c680425a267f943cd3377266b59f412a4497a0c2",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_server/tasks/db_mariadb_server_deploy_package.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "174d1d533031189290d5a9169168bd4cace122369f6d0ecc4a807da44e28d7ff",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_server/tasks/db_mariadb_server_finalize.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9e0eeb02a98b984f435268670e9df7151e7678c920dcbe4e564d7f96ce9d2496",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_server/tasks/db_mariadb_server_initialize.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a2ffffac4c66c09bca47654f88f3fa70ba63420f2b85149b1a94bff8683b0023",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_server/tasks/db_mariadb_server_prerequisite.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "185e59d0ae7b6d03c3791f524df63653398d0757940dd46e437f188d3fd0f1b2",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_server/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e5c17e5048da9b0c2c4c8c1b76c2b44cb807ce68984b2b8b8e4c90737cf05ec7",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_server/vars",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_server/vars/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0d75fcb6f3e6e2f78279a0a7fdaaa8db6ebdd83f330aed2d32482c7016d3eba3",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_server/vars/platform-RedHat.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "79e783de0c27426598543b4f64212700677c3fb1f05724330dde68ff1e9b33a5",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_server/vars/platform-Ubuntu.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "79e783de0c27426598543b4f64212700677c3fb1f05724330dde68ff1e9b33a5",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mariadb_server/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "892d548cde79ec6f55a97645ecf1ec5e2adc5b3173afda6f6eee8f8d13172667",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_client",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_client/CODE_OF_CONDUCT.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "451c325897da04f1a8e5f3c116445a573fa5ab9ca3642420297e06dd87f22d2a",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_client/LICENSE",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_client/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_client/defaults/main",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_client/defaults/main/action_parameters.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2c0f84626b7d512c74f4836f37e4cb349dbf53d7a85a6de131b835b37d62e54c",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_client/defaults/main/end_state_definition.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ac5d948e1e0c3e6b8c5828ee05788955d967f6c208beac461b159c8e201e9263",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_client/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_client/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8c45b2a3df5bea859186e8f7ba3c993aedcdd378b75ad7143873e47583f90593",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_client/meta/requirements-dev.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d28bb558b944495c65c6cbe27609ea1e0b0c51e1341f5955f6835ac024265754",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_client/meta/requirements.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c27b671d86b23cd674d3df6faeeb0e6eec4bcea6d4e9bde56f7b5f3a7233c9b3",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_client/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_client/tasks/db_mysql_client_deploy.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f4439873e1a342034c6b2bde332ac5c4be8a90d4735db9c554fa7a7c44df8564",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_client/tasks/db_mysql_client_deploy_package.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a6106db333260ff5d874723ac51936a536e87c3b84349418c1bc064a1fc37f02",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_client/tasks/db_mysql_client_finalize.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "18c547bf168e85be260620c536b955f7478ea9c6c0005622cf4a32df72ee0ce5",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_client/tasks/db_mysql_client_initialize.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c396a3a8f0b935aec10752b688cd2988e01be182122c0d9d3aa0a7fd2a8c3941",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_client/tasks/db_mysql_client_prerequisite.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9f0aff5fc3550488eabff429150112caa6953db64511ddbc40ff8192c9008d0e",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_client/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "71973a852e0d5d09dcc35b82ad124329aabda2d1f7ad001b25efa6c3e14e6b38",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_client/vars",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_client/vars/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "88b24a067e066ee0ac74a67c35a452aa3a43161654dc03b22428635b7c8ba181",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_client/vars/platform-Debian.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "77e6adf9f2607ec86053ca05515068ed5f067dcfd44b4ad42c4c371643e2b194",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_client/vars/platform-RedHat.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5b5c5328676a1d48f9bef20fdfb29ecaa3e83cd16f0d654db8fc07c9b6d4894c",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_client/vars/platform-Ubuntu.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c9cbcf20d1e0ee14ad0377c3029ea10cdf69563a68705ffae4dce48c68ea8dc0",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_client/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9f2a18a20d44af2b359ef35f0a76b6130f0052c1d9ad4590d637da5ad70c714f",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_server",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_server/CODE_OF_CONDUCT.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "451c325897da04f1a8e5f3c116445a573fa5ab9ca3642420297e06dd87f22d2a",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_server/LICENSE",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_server/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_server/defaults/main",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_server/defaults/main/action_parameters.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "83b68c3fdca64802967bde8f98f32e0456ed7ef8efd4ca234bcb64b87b38a1d7",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_server/defaults/main/end_state_definition.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1150b55fc537cceba840d9ff6c26d38b4a379f365a8bad6313a73d7eb59d2db2",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_server/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_server/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c3fbe5fc1e4d6d4e0541cc7294adc4e5e54aef8668cdc63834d6e640cb431ddc",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_server/meta/requirements-dev.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d28bb558b944495c65c6cbe27609ea1e0b0c51e1341f5955f6835ac024265754",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_server/meta/requirements.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c27b671d86b23cd674d3df6faeeb0e6eec4bcea6d4e9bde56f7b5f3a7233c9b3",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_server/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_server/tasks/db_mysql_server_deploy.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5245c1f2f4bcf0b0e953b2723818ebb9757b9e43f4482bce9749d64d3199f1f0",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_server/tasks/db_mysql_server_deploy_package.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b76d9c761bdd5618a709c945773d28f061e18ddf1913eac28a17f7f42b73e1d6",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_server/tasks/db_mysql_server_finalize.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d1106c69b78f9089bc4e72f216d6f6a78eebc0536db41a94414e3dfb3cf7d928",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_server/tasks/db_mysql_server_initialize.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "31cdff7ce09e2e8ec98e5fab9be06f7e237c8c7aa4f03a9b6f37bca1b93a38bf",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_server/tasks/db_mysql_server_prerequisite.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "85e7835d910081ddaf33304c06326fe7a833711ae6eb04c0c42aa6746b40b1d6",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_server/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e09c221934ea987483733374594e5109af6f0824d1e3e699673b9ec1b77671f1",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_server/vars",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_server/vars/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "33f65d02262793b8eb2fa7d29a760beeb2c6e44a3a1fff1dac9f3bececec299c",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_server/vars/platform-Debian.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e2d35b20c9bbcf3b64507fa0a1b7cb8f13f55ce9797a9d07b9ca47c753c28619",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_server/vars/platform-RedHat.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "86250bd596e8e3b71a262687116530266223b332fbd65b1ee8e82d71fedd508b",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_server/vars/platform-Ubuntu.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "86250bd596e8e3b71a262687116530266223b332fbd65b1ee8e82d71fedd508b",
+   "format": 1
+  },
+  {
+   "name": "roles/db_mysql_server/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8eef1933880528802d9f3242ade3633b33fa30b7dbabe1e31d3dbe984037f28e",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_client",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_client/CODE_OF_CONDUCT.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "451c325897da04f1a8e5f3c116445a573fa5ab9ca3642420297e06dd87f22d2a",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_client/LICENSE",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_client/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_client/defaults/main",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_client/defaults/main/action_parameters.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4827e63445518c384af07a76bdbab11b6b5a3aff5eb05b931e82b14d6ff7ea21",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_client/defaults/main/end_state_definition.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fd7665ab5c5217fa6537cedad42e4e670818562f2a7f15851cf6524190d4699a",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_client/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_client/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4bee57785e84dbea8b119afe6d00f2e3eb2138396d47e17120b25ddafb84e88c",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_client/meta/requirements-dev.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d28bb558b944495c65c6cbe27609ea1e0b0c51e1341f5955f6835ac024265754",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_client/meta/requirements.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c27b671d86b23cd674d3df6faeeb0e6eec4bcea6d4e9bde56f7b5f3a7233c9b3",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_client/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_client/tasks/db_postgresql_client_deploy.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3f8346d38fe491c66b1f3f2010f84809d5d406b400de97b73b21b9d6999d687a",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_client/tasks/db_postgresql_client_deploy_package.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8318878712adc09f9d2565795e0e32db6879e81793bffc6eefc6ce608bd8f020",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_client/tasks/db_postgresql_client_finalize.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8b6bb8f2dbd1f38f1fd7f42c264718f74f5bca6df40cdb4767abc3987969ca41",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_client/tasks/db_postgresql_client_initialize.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b646c33ba4ac1a345b14d8d7e2399e24197710a20c75c109407cd954f020e778",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_client/tasks/db_postgresql_client_prerequisite.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bc5ae0b1dba5b3b44bc081028370a6540342f0ba94cafab89247e49ba2a4322c",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_client/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9d8e31e271cccbfa26f0f577524b5e095b5ecbcf3939ea290a10822b4d704abb",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_client/vars",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_client/vars/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4d5448b771a7ca2dc6757fcb140519c46ff95abdfc20220638b1be9f6eba7f25",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_client/vars/platform-RedHat.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f501ba12d4494362013e7015f9fd4a04983223af9622796040eb090a1d250bd2",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_client/vars/platform-Ubuntu.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6cba5503a559288f89d8b26c9c06f54d61793590019e4d6b3c2076579006f50b",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_client/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "494d6b3510c7bf77f76f9e74c428c2138eddd80fadf7890d21047fd3d7f62817",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_server",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_server/CODE_OF_CONDUCT.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "451c325897da04f1a8e5f3c116445a573fa5ab9ca3642420297e06dd87f22d2a",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_server/LICENSE",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_server/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_server/defaults/main",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_server/defaults/main/action_parameters.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "56d922b91e6da7659d7ceb45b7dafc8a92240bb4f5f08235e08e592edd3ec7c0",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_server/defaults/main/end_state_definition.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "980919dc61947eacabbe925c3ca881e8b45a6b544cd51b903812d6c6d12b45ed",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_server/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_server/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1225027f24ebf7200ad97449e039ff177f37603290c80933c2253ad79930840b",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_server/meta/requirements-dev.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d28bb558b944495c65c6cbe27609ea1e0b0c51e1341f5955f6835ac024265754",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_server/meta/requirements.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c27b671d86b23cd674d3df6faeeb0e6eec4bcea6d4e9bde56f7b5f3a7233c9b3",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_server/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_server/tasks/db_postgresql_server_deploy.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "dda2678173051926cb926fc191903a97987c935af69c9759b48c8f94d1af42c4",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_server/tasks/db_postgresql_server_deploy_package.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f026b6449113437c7423bde3a8212159ffbe459af8e83413f00b0e01b133f09f",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_server/tasks/db_postgresql_server_finalize.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5c62620e493552c86d53e06092ff7b033378bdd83c27b78bda51f2405ad927af",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_server/tasks/db_postgresql_server_initialize.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4b8e3fa6b03ba335d1885f913203e1524cc93367bf53d87bff28380f81e27809",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_server/tasks/db_postgresql_server_prerequisite.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "04e584405103cd7c50566c0d23a64c46fdf0b6e7bf1a5533fd7702b10f788ec4",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_server/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c9890ec6dce85cad61caa7e8fc77455ea716dadbd1b79a7183ebfb834d550bfa",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_server/vars",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_server/vars/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6da8c4197bb8f23e74e94f256d95a0b798d37eb04764f9c6938c8576cf31eb7c",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_server/vars/platform-RedHat.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9e72e5f2a3d6a90bb72ce34d967d18fd306ef612817322c445f91e309a8999e1",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_server/vars/platform-Ubuntu.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9e65a235e7053a91088bae880535e8015dcd3684411675bcc9f2fce6df7b23ea",
+   "format": 1
+  },
+  {
+   "name": "roles/db_postgresql_server/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "80e057fca1bd6732aa6bb7115629303a61366fce439842b7a9610832150a6dea",
+   "format": 1
+  },
+  {
+   "name": ".ansible-lint",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "78b2e1b32096945abed3400606989f08c20250e6cfdddd99333e054269bfa15a",
+   "format": 1
+  },
+  {
+   "name": ".yamllint",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "797da60e321b7d7f6a72b462f5e0b960eb3129f053b4c8685b9c6507b6800100",
+   "format": 1
+  },
+  {
+   "name": "CHANGELOG.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "903275fa60f3c44112f824d26bb02d9a5916997a6d3727afece50ee19217a6af",
+   "format": 1
+  },
+  {
+   "name": "README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "117058abbc20b2d82d51468262e04251e674ae12532f704b243016b91d29923b",
+   "format": 1
+  }
+ ],
+ "format": 1
+}

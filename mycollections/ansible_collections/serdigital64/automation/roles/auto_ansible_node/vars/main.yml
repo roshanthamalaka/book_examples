@@ -1,0 +1,33 @@
+---
+auto_ansible_node_platforms:
+  - "CentOS8"
+  - "RedHat8"
+  - "AlmaLinux8"
+  - "Rocky8"
+  - "OracleLinux8"
+  - "OracleLinux9"
+  - "Ubuntu20"
+  - "Ubuntu21"
+  - "Ubuntu22"
+  - "Fedora33"
+  - "Fedora35"
+  - "Fedora36"
+  - "Debian10"
+  - "Debian11"
+  - "MacOSX12"
+
+auto_ansible_node_base:
+  access:
+    user:
+      owner: "{{ auto_ansible_node_owners['node']['user'] }}"
+    group:
+      owner: "{{ auto_ansible_node_owners['node']['group'] }}"
+    mode:
+      exe: "0750"
+      file: "0640"
+      dir: "0750"
+  paths:
+    home: "{{ auto_ansible_node_paths['var'] + '/home' }}"
+
+# auto_ansible_node___path: ~
+...

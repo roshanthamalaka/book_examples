@@ -1,0 +1,59 @@
+---
+- name: "Manage A:Platform64 managed nodes / Phase 1"
+  hosts: "aplatform64_servers"
+  gather_facts: false
+
+  pre_tasks:
+    - name: "Manage A:Platform64 managed nodes / Phase 1 / Discover Target Platform"
+      ansible.builtin.setup:
+        gather_subset: "min"
+      when:
+        - manage_aplatform64_nodes_phase == '1'
+
+  tasks:
+    - name: "Manage A:Platform64 managed nodes / Phase 1 / Register node"
+      vars:
+        auto_aplatform64:
+          provision: true
+      ansible.builtin.include_role:
+        name: "serdigital64.automation.auto_aplatform64"
+      when:
+        - manage_aplatform64_nodes_phase == '1'
+
+- name: "Manage A:Platform64 managed nodes / Phase 2"
+  hosts: "aplatform64_nodes"
+  gather_facts: false
+  vars:
+    ansible_ssh_common_args: "-o PreferredAuthentications=password -o PubkeyAuthentication=no -o StrictHostKeyChecking=no"
+    ansible_user: "{{ auto_aplatform64_bootstrap_node_user }}"
+    ansible_password: "{{ auto_aplatform64_bootstrap_node_password }}"
+    ansible_become_method: "sudo"
+    ansible_become_password: "{{ ansible_password }}"
+
+  pre_tasks:
+    - name: "Manage A:Platform64 managed nodes / Phase 2 / Discover Target Platform"
+      delegate_to: "localhost"
+      ansible.builtin.setup:
+        gather_subset: "min"
+      when:
+        - manage_aplatform64_nodes_phase == '2'
+
+  tasks:
+    - name: "Manage A:Platform64 managed nodes / Phase 2 / Load site settings"
+      ansible.builtin.include_role:
+        name: "serdigital64.automation.auto_aplatform64"
+        public: true
+      when:
+        - manage_aplatform64_nodes_phase == '2'
+
+    - name: "Manage A:Platform64 managed nodes / Phase 2 / Configure node"
+      vars:
+        auto_ansible_node:
+          prepare: true
+          provision: true
+        auto_ansible_node_key_file: "{{ auto_ansible_control_base['files']['managed_public_key'] }}"
+      ansible.builtin.include_role:
+        name: "serdigital64.automation.auto_ansible_node"
+      when:
+        - manage_aplatform64_nodes_phase == '2'
+...

@@ -1,0 +1,52 @@
+---
+- name: "Automation / A:Platform64 / Initialize / Check Platform compatibility ({{
+    ansible_distribution + ansible_distribution_major_version }})"
+  ansible.builtin.assert:
+    quiet: true
+    fail_msg: "Target Platform not supported: {{ ansible_distribution + ansible_distribution_major_version }}"
+    that:
+      - ansible_distribution + ansible_distribution_major_version in auto_aplatform64_platforms
+
+- name: "Automation / A:Platform64 / Initialize / Check required parameters"
+  ansible.builtin.assert:
+    fail_msg: "required parameters are missing ({{
+      auto_aplatform64_site | default('auto_aplatform64_site') }} ' / ' {{
+      auto_aplatform64_owners | default('auto_aplatform64_owners') }} ' / ' {{
+      auto_aplatform64_paths | default('auto_aplatform64_paths')
+      }})"
+    quiet: true
+    that:
+      - auto_aplatform64_site is defined
+      - auto_aplatform64_site | length > 0
+      - auto_aplatform64_owners is defined
+      - auto_aplatform64_owners['control']['user'] is defined
+      - auto_aplatform64_owners['control']['user'] | length > 0
+      - auto_aplatform64_owners['control']['group'] is defined
+      - auto_aplatform64_owners['control']['group'] | length > 0
+      - auto_aplatform64_owners['node']['user'] is defined
+      - auto_aplatform64_owners['node']['user'] | length > 0
+      - auto_aplatform64_owners['node']['group'] is defined
+      - auto_aplatform64_owners['node']['group'] | length > 0
+      - auto_aplatform64_paths is defined
+      - auto_aplatform64_paths['control']['root'] is defined
+      - auto_aplatform64_paths['control']['root'] | length > 0
+      - auto_aplatform64_paths['control']['var'] is defined
+      - auto_aplatform64_paths['control']['var'] | length > 0
+      - auto_aplatform64_paths['node']['var'] is defined
+      - auto_aplatform64_paths['node']['var'] | length > 0
+
+- name: "Automation / A:Platform64 / Initialize / Load Dependencies: auto_ansible_control"
+  vars:
+    auto_ansible_control_paths: "{{ auto_aplatform64_paths['control'] }}"
+    auto_ansible_control_owners: "{{ auto_aplatform64_owners }}"
+    auto_ansible_control_site: "{{ auto_aplatform64_site }}"
+    auto_ansible_control_node: "{{ auto_aplatform64_node }}"
+    auto_ansible_control_python: "{{ auto_aplatform64_python }}"
+  ansible.builtin.include_role:
+    name: "serdigital64.automation.auto_ansible_control"
+    public: true
+
+- name: "Automation / A:Platform64 / Initialize / Set site variables"
+  ansible.builtin.include_vars:
+    file: "site.yml"
+...

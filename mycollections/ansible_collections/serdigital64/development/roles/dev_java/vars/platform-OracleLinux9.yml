@@ -1,0 +1,21 @@
+---
+dev_java_base:
+  run:
+    java: "/usr/bin/java"
+
+dev_java_profiles:
+  distro:
+    v1_18: &dev_java_profiles_distro_v18
+      source: "updates"
+      packages:
+        - name: "java-latest-openjdk"
+    latest: *dev_java_profiles_distro_v18
+
+dev_java_repository_custom_yum: []
+dev_java_repository_custom_apt: []
+
+dev_java_repository_catalog_distro:
+  epel: true
+dev_java_repository_catalog_yum: {}
+dev_java_repository_catalog_apt: {}
+...

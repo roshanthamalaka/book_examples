@@ -1,0 +1,10 @@
+---
+- name: "Automation / Ansible / Node / Provision / Key / Deploy Public Key"
+  become: true
+  ansible.posix.authorized_key:
+    exclusive: false
+    manage_dir: true
+    follow: false
+    state: "present"
+    user: "{{ auto_ansible_node_owners['node']['user'] }}"
+    key: "{{ lookup('file', auto_ansible_node_key_file) }}"

@@ -1,0 +1,9 @@
+---
+- name: "DevOps / GitLab / Server / Setup / Firewall / Configure access rules"
+  vars:
+    sec_firewall_os:
+      setup: true
+    sec_firewall_os_rules: "{{ dops_gitlab_server_firewall_rules }}"
+  ansible.builtin.include_role:
+    name: "serdigital64.security.sec_firewall_os"
+...

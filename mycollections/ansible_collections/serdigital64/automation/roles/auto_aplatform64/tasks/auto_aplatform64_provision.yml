@@ -1,0 +1,8 @@
+---
+- name: "Automation / A:Platform64 / Provision / New Node"
+  ansible.builtin.include_tasks:
+    file: "auto_aplatform64_provision_node_new.yml"
+  when:
+    - auto_aplatform64_bootstrap_node_fqdn is defined
+    - auto_aplatform64_bootstrap_node_fqdn | length > 0
+...

@@ -1,0 +1,37 @@
+---
+auto_aplatform64_base:
+  paths:
+    lib: "files/lib"
+    playbooks: "files/playbooks"
+  templates:
+    catalog_csv: "playbooks/catalog.csv.j2"
+    inventories: "inventories"
+    playbooks: "playbooks"
+    roles: "roles"
+    host_vars: "host_vars"
+    group_vars: "group_vars"
+    auto_aplatform64_yml: "group_vars/auto_aplatform64.yml.j2"
+    ansible_site_yml: "group_vars/ansible_site.yml.j2"
+    ansible_localhost_yml: "host_vars/ansible.yml.j2"
+  files:
+    catalog_csv: "{{
+      auto_ansible_control_base['paths']['site_playbooks'] +
+      '/catalog.csv'
+      }}"
+    auto_aplatform64_yml: "{{
+      auto_ansible_control_base['paths']['site_group_vars_all'] +
+      '/auto_aplatform64.yml'
+      }}"
+    ansible_site_yml: "{{
+      auto_ansible_control_base['paths']['site_group_vars_all'] +
+      '/ansible_site.yml'
+      }}"
+    ansible_localhost_yml: "{{
+      auto_ansible_control_base['paths']['site_host_vars'] +
+      '/localhost/ansible_site.yml'
+      }}"
+    install_log: "{{
+      auto_ansible_control_base['paths']['site_logs'] +
+      '/install.log'
+      }}"
+...

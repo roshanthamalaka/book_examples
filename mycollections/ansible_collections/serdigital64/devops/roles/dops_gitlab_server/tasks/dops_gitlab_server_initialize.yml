@@ -1,0 +1,20 @@
+---
+- name: "DevOps / GitLab / Server / Initialize / Check Platform compatibility ({{
+    ansible_distribution + ansible_distribution_major_version }})"
+  ansible.builtin.assert:
+    quiet: true
+    fail_msg: "Target Platform not supported: {{ ansible_distribution + ansible_distribution_major_version }}"
+    that:
+      - ansible_distribution + ansible_distribution_major_version in dops_gitlab_server_platforms
+
+- name: "DevOps / GitLab / Server / Initialize / Set Platform specific variables"
+  ansible.builtin.include_vars:
+    file: "{{ 'platform-' + dops_gitlab_server_os_family + '.yml' }}"
+
+- name: "DevOps / GitLab / Server / Initialize / Resolve prerequisites"
+  ansible.builtin.include_tasks:
+    file: "dops_gitlab_server_prerequisite.yml"
+  when:
+    - dops_gitlab_server['resolve_prereq'] is defined
+    - dops_gitlab_server['resolve_prereq']
+...

@@ -1,0 +1,71 @@
+---
+dops_git_client_platforms:
+  - "CentOS8"
+  - "RedHat8"
+  - "AlmaLinux8"
+  - "Rocky8"
+  - "OracleLinux8"
+  - "OracleLinux9"
+  - "Ubuntu20"
+  - "Ubuntu21"
+  - "Ubuntu22"
+  - "Fedora33"
+  - "Fedora35"
+  - "Fedora36"
+  - "Debian10"
+  - "Debian11"
+  - "MacOSX12"
+
+dops_git_client_os_family: >-
+  {%- if
+      ( ansible_distribution == 'CentOS' ) or
+      ( ansible_distribution == 'RedHat' ) or
+      ( ansible_distribution == 'AlmaLinux' ) or
+      ( ansible_distribution == 'Rocky' ) or
+      ( ansible_distribution == 'OracleLinux' ) or
+      ( ansible_distribution == 'Fedora' )
+  -%}
+    {{ 'RedHat' }}
+  {%- elif
+      ( ansible_distribution == 'Debian' ) or
+      ( ansible_distribution == 'Ubuntu' )
+  -%}
+    {{ 'Ubuntu' }}
+  {%- elif
+      ( ansible_distribution == 'MacOSX' )
+  -%}
+    {{ 'MacOSX' }}
+  {%- else -%}
+    {{ 'NotSupported' }}
+  {%- endif -%}
+
+dops_git_client_base:
+  access:
+    mode:
+      dir: "0700"
+      file: "0600"
+  templates:
+    usr_config: "usr_config.ini.j2"
+    prj_config: "prj_config.ini.j2"
+    gitignore: "gitignore.ini.j2"
+  files:
+    project_git_head: ".git/HEAD"
+  etc:
+    usr_gitconfig: ".gitconfig"
+    project_gitignore: ".gitignore"
+    project_git_config: ".git/config"
+  paths:
+    project_git: ".git"
+  run:
+    git: "/usr/bin/git"
+
+dops_git_client_defaults:
+  branch: "main"
+
+dops_git_client___provision_ignore: ~
+dops_git_client___provision_git: ~
+dops_git_client___provision_status: ~
+
+# dops_git_client___provision_repo
+# dops_git_client___setup_user
+...

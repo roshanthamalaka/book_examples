@@ -1,0 +1,40 @@
+---
+# Define supported platforms
+dops_yamllint_platforms:
+  - "CentOS8"
+  - "RedHat8"
+  - "AlmaLinux8"
+  - "Rocky8"
+  - "OracleLinux8"
+  - "OracleLinux9"
+  - "Ubuntu20"
+  - "Ubuntu21"
+  - "Ubuntu22"
+  - "Fedora33"
+  - "Fedora35"
+  - "Fedora36"
+  - "Debian10"
+  - "Debian11"
+  - "MacOSX12"
+
+# Multiplatform packages
+dops_yamllint_profiles:
+  pip:
+    latest:
+      supported: true
+      packages:
+        - name: "yamllint"
+      options:
+        pip:
+          owner: "{{ dops_yamllint_owners['app']['name'] }}"
+          group: "{{ dops_yamllint_owners['app']['group'] }}"
+          path: "{{ dops_yamllint_paths['root'] }}"
+          cli: "{{ dops_yamllint_application['name'] }}"
+
+# Define common paths
+dops_yamllint_base:
+  paths:
+    root: "{{ dops_yamllint_paths['root'] }}"
+  run:
+    cli: "{{ dops_yamllint_paths['root'] + '/' + dops_yamllint_application['name'] }}"
+...

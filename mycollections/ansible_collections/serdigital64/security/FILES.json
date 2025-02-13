@@ -1,0 +1,908 @@
+{
+ "files": [
+  {
+   "name": ".",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "CODE_OF_CONDUCT.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "451c325897da04f1a8e5f3c116445a573fa5ab9ca3642420297e06dd87f22d2a",
+   "format": 1
+  },
+  {
+   "name": "LICENSE",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+   "format": 1
+  },
+  {
+   "name": "meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "meta/runtime.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b2025203e17c78b42566697044d5f0417a5b72ad1b99e8d5f42465596a3c2827",
+   "format": 1
+  },
+  {
+   "name": "playbooks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "playbooks/sec_firewall_os.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0355202ece815f44c565ce86d32a645e8e6ab79335f412c29675dc5b5b8fb064",
+   "format": 1
+  },
+  {
+   "name": "playbooks/sec_key_ssh.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e24f91fda3eed9b7d274e7f9d70256f61c873282ea19e45a71248f41a11774d0",
+   "format": 1
+  },
+  {
+   "name": "playbooks/sec_openssh_client.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "32e98d9bfe6f84bab0c810f55dd5caafff9c8622f5a57e3789ac03c3d8afb7f5",
+   "format": 1
+  },
+  {
+   "name": "playbooks/sec_openssh_server.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b6b8b38590f8dee1dca60b5473254095b93a644f49ca645166b80ed620610f11",
+   "format": 1
+  },
+  {
+   "name": "roles",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/CODE_OF_CONDUCT.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "451c325897da04f1a8e5f3c116445a573fa5ab9ca3642420297e06dd87f22d2a",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/LICENSE",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/defaults/main",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/defaults/main/action_parameters.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1925915126986a9f9b6032c53ad7271af46f8aec174103402202ec9b63f3e10d",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/defaults/main/end_state_definition.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4ad13dced01e600cc852f1236371b80b8507386e8f50b6a664292367f15d6fe3",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fb7e6b100681a4823f4897c6d40caa5e1240cce091c95c1f81c531c862df3b01",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/meta/requirements-dev.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6a9d710060146585054c7b7a05388605ec2752cca7f0192228bb9f5b8e0de252",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/meta/requirements.txt",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "670911993ee54164fdbef6518723ff727c885a4b5c707ef254e488bfaa9bd437",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/meta/requirements.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6d348267d738e86549f4fb79fcb00de21bf42f8dd1161ac6f19cac577ac2679d",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7784294fc92e4afaa159c43274adf10058e74bb860f2f5354501eee6f2727298",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/tasks/sec_firewall_os_control.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e5ac4186ff51e9f02e9684a73acb680a71c0d8d35372d2749a21838b36ed962c",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/tasks/sec_firewall_os_control_subsystem-RedHat.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7f9c469a1a6e832903237927619dbcac8abec993755356d3b0d934db872a03f6",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/tasks/sec_firewall_os_control_subsystem-Ubuntu.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7f9c469a1a6e832903237927619dbcac8abec993755356d3b0d934db872a03f6",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/tasks/sec_firewall_os_deploy.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "223b4d7be1e724dfe57ab6615294098a7baeaf828675db908b9dd89cd4d5c5a5",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/tasks/sec_firewall_os_deploy_package.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ade546ca84f5b0ec23a311c9632a7cc3ebbcd2530a31e8f91fa82f17ec8b7f5f",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/tasks/sec_firewall_os_finalize.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "38e5fc2fa345d48224c5c4eb573a13905142c32c12a66d9696c09808cb6960d3",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/tasks/sec_firewall_os_initialize.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f28f40b06b5a05248613911e214328f299d0c459b58a478f3ed3b066f1bd51a7",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/tasks/sec_firewall_os_prerequisite.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "40b3b1f37f02c8e6f0749a314ea4290885c6afc7106928001139245cf13a5f16",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/tasks/sec_firewall_os_provision.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f812bb71b1b2aa2dcbd2f295ab80a08cdecfcc1d0f687e8ae4cd5e109ab8c5e4",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/tasks/sec_firewall_os_provision_rule-RedHat.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ed6caffd496a6b30c550c04e751ebbecb3bf5a9ca41f99f2928024bcfa141938",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/tasks/sec_firewall_os_setup.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "04a318913f1681deee24293a728c93eb220ed5af30dc308c7514674d15383eaa",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/tasks/sec_firewall_os_setup_subsystem-RedHat.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "32487ef20eccfdb8f81380369695bd13ee43c81539ad424a7edcbb5058da8144",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/tasks/sec_firewall_os_setup_subsystem-Ubuntu.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "32487ef20eccfdb8f81380369695bd13ee43c81539ad424a7edcbb5058da8144",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/vars",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/vars/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f33fd66434f0af600a1ffd591b235aa368b2866a188b6d169e0b69ad8957f23c",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/vars/platform-RedHat.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ae821ab2acaf98a17ed82dcafa1e9db7253a9d151b3a725e01263532edddc212",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/vars/platform-Ubuntu.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b2861d9e5d123fda53743c3b27d9135caea6a81326076b97ade9d96f94a3e030",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_firewall_os/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "075bda71a01fb4fab9741f26f208d4620af5b4daea8115e7fdb75aae8636cbde",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_key_ssh",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/sec_key_ssh/CODE_OF_CONDUCT.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "451c325897da04f1a8e5f3c116445a573fa5ab9ca3642420297e06dd87f22d2a",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_key_ssh/LICENSE",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_key_ssh/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/sec_key_ssh/defaults/main",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/sec_key_ssh/defaults/main/action_parameters.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4c53ff81550a1cc5678ae8505af5aa0351d2ab0a7a82da6c87c1f9bd4e4f322d",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_key_ssh/defaults/main/end_state_definition.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c11b815819a904798c30c26fb6f5df3ddc4fd0b1723209a82dd758af1d458f5e",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_key_ssh/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/sec_key_ssh/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cebf30f949569e501d2d651a4c217a1c17efb873d0f6485516c6197851b1b4d1",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_key_ssh/meta/requirements-dev.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "bd8da93796b0db7b4e06895eb5192b04950b370e52f4a42edc6b922a26c74cc8",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_key_ssh/meta/requirements.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "404b13e7f3eb8082dc6c1590796c2febc5ff6dd0ead2765618c2f2de5a690195",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_key_ssh/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/sec_key_ssh/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4800f1be98af8622906862cdf2c2d32bf30f57e2d227871f04e85818ef1ef4b1",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_key_ssh/tasks/sec_key_ssh_finalize.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f3c4a43ea5158b6ccf70dcc5fe0b671a448e4e29f93e5e9ee3478866bfccda24",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_key_ssh/tasks/sec_key_ssh_initialize.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cb891a46a69dd751e9242294ec541bd5472b60989024205f238762b4d8f0854d",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_key_ssh/tasks/sec_key_ssh_setup.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3254b878773fee73e13f25eae7937a88ba48a25697831fafc59dc50150b3e14c",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_key_ssh/tasks/sec_key_ssh_setup_pair.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a581db0248292778fd78c987d893acbafe3a7868b4bb459e0a0cb7912eae01c7",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_key_ssh/tasks/sec_key_ssh_setup_register.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "43824d29409797214da9b6dc89323893003831c06192136619cd80f0ed022eef",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_key_ssh/tasks/sec_key_ssh_setup_register_hosts.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "f69b985b6ad2d827746b15088e3bb40676c2284494a45794edf57c466144eb8d",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_key_ssh/tasks/sec_key_ssh_setup_remote.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a5f622d2299f6530b99900e3532c0894894ef634e5d40add7b25936aa69f9f1a",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_key_ssh/vars",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/sec_key_ssh/vars/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "17ced229595ccd644dd6beae556fece00d2d03e7793237283086ca203f1df394",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_key_ssh/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cc1059deb706729323fcea16cb7be0ce60f9aca4f4c40b572dd9ae7c8adf79e9",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/CODE_OF_CONDUCT.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "451c325897da04f1a8e5f3c116445a573fa5ab9ca3642420297e06dd87f22d2a",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/LICENSE",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/defaults/main",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/defaults/main/action_parameters.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e85ad7ec1cab0c308eb413dce711426dbf32816f4947adb7591485d29c9fef30",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/defaults/main/end_state_definition.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "10b0ec2d481343249bf58dcdc7eeb5936e461be183ba1e2a745e8cb6a8b02a01",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "04c2c9611d6687ad7c30103f43186a9a3ed346a1df12caf57e311fd4d915123a",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/meta/requirements-dev.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d28bb558b944495c65c6cbe27609ea1e0b0c51e1341f5955f6835ac024265754",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/meta/requirements.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c27b671d86b23cd674d3df6faeeb0e6eec4bcea6d4e9bde56f7b5f3a7233c9b3",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c723c83a9537d7df53624d1c1c0515bcb05293015706de4e421aabecff650650",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/tasks/sec_openssh_client_deploy.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "acdea78d961330f3035e72675a721d6b205923541d5c0915977cdb408890593a",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/tasks/sec_openssh_client_deploy_package.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "405a36b230b4372a829dab826ef11cb370026d59a74e0da1723a65b80697bbe1",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/tasks/sec_openssh_client_finalize.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d4830ce13765370c729e236d037790a9a074d6ee9e03a85dd6471b17a267dd49",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/tasks/sec_openssh_client_initialize.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "b8bd0b766adeb1a1c6a7afe883b7f9d95a80e4cff23a1d9d3afa8b85475293cc",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/tasks/sec_openssh_client_prerequisite.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "547d6f21b419ff89d4b93f0a9f48aa04c075fd77a1f1a28e0e700d338ee841e0",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/vars",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/vars/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "3d08efb4c0aef46258131121b43c4899e6bc4e1df62e95d56952dd37840fbec6",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/vars/platform-AlmaLinux8.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4f97168ce864bd1ad473394f6c06ade8d364a825453c6a4ef876dbd608bf056a",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/vars/platform-CentOS8.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4f97168ce864bd1ad473394f6c06ade8d364a825453c6a4ef876dbd608bf056a",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/vars/platform-Debian10.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cee08b9f45842e64f7caf96f5f9e9703536b6940db305f83dede6d4491304d27",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/vars/platform-Debian11.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cee08b9f45842e64f7caf96f5f9e9703536b6940db305f83dede6d4491304d27",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/vars/platform-Fedora33.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "06b08fb997c73b3276847f34cb55067d78fb79f4561376108984e05f31cae4a9",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/vars/platform-Fedora35.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "06b08fb997c73b3276847f34cb55067d78fb79f4561376108984e05f31cae4a9",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/vars/platform-Fedora36.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "06b08fb997c73b3276847f34cb55067d78fb79f4561376108984e05f31cae4a9",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/vars/platform-OracleLinux8.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4f97168ce864bd1ad473394f6c06ade8d364a825453c6a4ef876dbd608bf056a",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/vars/platform-OracleLinux9.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4f97168ce864bd1ad473394f6c06ade8d364a825453c6a4ef876dbd608bf056a",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/vars/platform-RedHat8.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4f97168ce864bd1ad473394f6c06ade8d364a825453c6a4ef876dbd608bf056a",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/vars/platform-Rocky8.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4f97168ce864bd1ad473394f6c06ade8d364a825453c6a4ef876dbd608bf056a",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/vars/platform-Ubuntu20.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cee08b9f45842e64f7caf96f5f9e9703536b6940db305f83dede6d4491304d27",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/vars/platform-Ubuntu21.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cee08b9f45842e64f7caf96f5f9e9703536b6940db305f83dede6d4491304d27",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/vars/platform-Ubuntu22.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cee08b9f45842e64f7caf96f5f9e9703536b6940db305f83dede6d4491304d27",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_client/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "fa7050d40eb17e2bea3e100697376e9277f176c85a61ac7c72b7d843d26e554f",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_server",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_server/CODE_OF_CONDUCT.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "451c325897da04f1a8e5f3c116445a573fa5ab9ca3642420297e06dd87f22d2a",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_server/LICENSE",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_server/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_server/defaults/main",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_server/defaults/main/action_parameters.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "a4c0f78a99972fda99e99fb40c3b95b142e9ff074a10f2b067888c91ef3189e5",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_server/defaults/main/end_state_definition.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "81c8ef193e04048702674c3ffe40f91e2e8ade7cfb81b25a5c451c2275253f31",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_server/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_server/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9eed2183a40e1a7dd7db3d224ff7fa9638ec64568a2c6e4e85e64bf657659afb",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_server/meta/requirements-dev.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d28bb558b944495c65c6cbe27609ea1e0b0c51e1341f5955f6835ac024265754",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_server/meta/requirements.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c27b671d86b23cd674d3df6faeeb0e6eec4bcea6d4e9bde56f7b5f3a7233c9b3",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_server/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_server/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "64bd1a3be0d802f56874eb4b7666b0f051dd3dbfcca7a9db4d668115cced5e9e",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_server/tasks/sec_openssh_server_deploy.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1f9462c817bcbba8a62dc7fbb21e56a0ed0657feb3033599d7180f281158d5f7",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_server/tasks/sec_openssh_server_deploy_options.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "c292c305bccc3badf527bafe22bc3de92e5a17ed9d940a4cf0ba2af642e34acb",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_server/tasks/sec_openssh_server_deploy_package.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6dd1b7ab1ae3873ef3a9191888e32a3af0e809a4ec5e64c407db92a4602169e7",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_server/tasks/sec_openssh_server_finalize.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2069695ff73eacb9321f8c190fb2e0771c3d8a342392d98442feaccd251453df",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_server/tasks/sec_openssh_server_initialize.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "51706fcd01e6066ed279bf7b0a6d0dfdb972eeceeede74bef1fdd27e8afb6287",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_server/tasks/sec_openssh_server_prerequisite.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "0966a08c52033ea59071dc38db0cacc42d475344947332cf40aaa6ba2ae2de3b",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_server/vars",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_server/vars/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "d28b993fbdf7856c63e3c343ecb789612a68217c889766cf05a53a0c82c78060",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_server/vars/platform-RedHat.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "63fca875061729f913cd679c5f3fb330d1edd4f77fcdd5d1cae1964487cec185",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_server/vars/platform-Ubuntu.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "7b0b54987017c7d959a2e9cb4b25809b99562111b97acfd3c59335a7b20a82f6",
+   "format": 1
+  },
+  {
+   "name": "roles/sec_openssh_server/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1724f47914cd664377e2e38dcbc71648eb412a21d74e9d9b8e08c514b4e6a536",
+   "format": 1
+  },
+  {
+   "name": ".ansible-lint",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "78b2e1b32096945abed3400606989f08c20250e6cfdddd99333e054269bfa15a",
+   "format": 1
+  },
+  {
+   "name": ".yamllint",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "797da60e321b7d7f6a72b462f5e0b960eb3129f053b4c8685b9c6507b6800100",
+   "format": 1
+  },
+  {
+   "name": "CHANGELOG.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "45dcd1d0084ef22c23e471b6eb9652bf746ab25732b60d02cce8829cba54a078",
+   "format": 1
+  },
+  {
+   "name": "README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4ad81e36386f19d89402b9f02bda17dd7e688e445b603c26360ba93799cf13ec",
+   "format": 1
+  }
+ ],
+ "format": 1
+}

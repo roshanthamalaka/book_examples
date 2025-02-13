@@ -1,0 +1,45 @@
+---
+- name: "Manage Dev Nodes"
+  hosts: "doc_sites"
+  gather_facts: false
+
+  pre_tasks:
+    - name: "Manage Dev Nodes / Discover Target Platform"
+      ansible.builtin.setup:
+        gather_subset: "min"
+
+    - name: "Manage Dev Nodes / Prepare package repositories"
+      vars:
+        sys_repository:
+          prepare: true
+          deploy: true
+          setup: true
+          provision: true
+      ansible.builtin.include_role:
+        name: "serdigital64.system.sys_repository"
+
+    - name: "Manage Dev Nodes / Prepare archive manager"
+      vars:
+        bkp_archive:
+          deploy: true
+      ansible.builtin.include_role:
+        name: "serdigital64.backup.bkp_archive"
+
+    - name: "Manage Dev Nodes / Prepare package installer"
+      vars:
+        sys_package:
+          prepare: true
+      ansible.builtin.include_role:
+        name: "serdigital64.system.sys_package"
+
+  tasks:
+    - name: "Manage Dev Nodes / Provision MkDocs"
+      vars:
+        web_mkdocs:
+          deploy: true
+      ansible.builtin.include_role:
+        name: "serdigital64.web.web_mkdocs"
+      when:
+        - doc_sites_apps['mkdocs'] is defined
+        - doc_sites_apps['mkdocs']
+...

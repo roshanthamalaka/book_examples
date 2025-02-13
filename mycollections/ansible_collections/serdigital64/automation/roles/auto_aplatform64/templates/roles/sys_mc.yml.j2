@@ -1,0 +1,21 @@
+---
+#
+# A:Platform64 / Ansible role settings / Site: {{ auto_ansible_control_site }}
+#
+# * Role settings are available only for the corresponding host group and associated playbook
+#
+
+{%- raw %}
+sys_mc_application:
+  name: "mc"
+  type: "{{ (ansible_distribution == 'MacOSX') | ternary('brew', 'distro') }}"
+  version: "latest"
+  installed: true
+{% endraw %}
+
+sys_mc_actions:
+  setup:
+    overwrite: false
+
+sys_mc_users: []
+...

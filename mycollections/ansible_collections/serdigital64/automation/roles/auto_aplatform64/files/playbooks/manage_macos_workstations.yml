@@ -1,0 +1,79 @@
+---
+- name: "Manage MacOS Workstations"
+  hosts: "macos_workstations"
+  gather_facts: false
+
+  pre_tasks:
+    - name: "Manage Linux Workstations / Discover Target Platform"
+      ansible.builtin.setup:
+        gather_subset: "min"
+
+    - name: "Manage Linux Workstations / Prepare package repositories"
+      vars:
+        sys_repository:
+          prepare: true
+          deploy: true
+          setup: true
+          provision: true
+      ansible.builtin.include_role:
+        name: "serdigital64.system.sys_repository"
+
+    - name: "Manage Linux Workstations / Prepare archive manager"
+      vars:
+        bkp_archive:
+          deploy: true
+      ansible.builtin.include_role:
+        name: "serdigital64.backup.bkp_archive"
+
+    - name: "Manage Linux Workstations / Prepare package installer"
+      vars:
+        sys_package:
+          prepare: true
+      ansible.builtin.include_role:
+        name: "serdigital64.system.sys_package"
+
+  tasks:
+
+    - name: "Manage Linux Workstations / Provision unix users and groups"
+      vars:
+        sys_user:
+          setup: true
+      ansible.builtin.include_role:
+        name: "serdigital64.system.sys_user"
+      when:
+        - macos_workstations_component['users'] is defined
+        - macos_workstations_component['users']
+
+    - name: "Manage Linux Workstations / Provision unix shells"
+      vars:
+        sys_shell:
+          deploy: true
+          setup: true
+      ansible.builtin.include_role:
+        name: "serdigital64.system.sys_shell"
+      when:
+        - macos_workstations_component['shell'] is defined
+        - macos_workstations_component['shell']
+
+    - name: "Manage Linux Workstations / Deploy and configure SUDO"
+      vars:
+        sys_sudo:
+          deploy: true
+          setup: true
+      ansible.builtin.include_role:
+        name: "serdigital64.system.sys_sudo"
+      when:
+        - macos_workstations_component['sudo'] is defined
+        - macos_workstations_component['sudo']
+
+    - name: "Manage Linux Workstations / Provision MC tool"
+      vars:
+        sys_mc:
+          deploy: true
+          setup: true
+      ansible.builtin.include_role:
+        name: "serdigital64.system.sys_mc"
+      when:
+        - macos_workstations_component['mc'] is defined
+        - macos_workstations_component['mc']
+...

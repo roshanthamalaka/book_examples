@@ -1,0 +1,9 @@
+---
+auto_aplatform64:
+  prepare: false
+  setup: false
+  provision: false
+auto_aplatform64_bootstrap_node_fqdn: ~
+auto_aplatform64_bootstrap_node_user: ~
+auto_aplatform64_bootstrap_node_password: ~
+...

@@ -1,0 +1,5 @@
+---
+- name: "Automation / Ansible / Node / Provision / Key"
+  ansible.builtin.include_tasks:
+    file: "auto_ansible_node_provision_key.yml"
+...

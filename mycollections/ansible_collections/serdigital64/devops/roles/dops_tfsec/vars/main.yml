@@ -1,0 +1,32 @@
+---
+# Define supported platforms
+dops_tfsec_platforms:
+  - "CentOS8"
+  - "RedHat8"
+  - "AlmaLinux8"
+  - "Rocky8"
+  - "OracleLinux8"
+  - "OracleLinux9"
+  - "Ubuntu20"
+  - "Ubuntu21"
+  - "Ubuntu22"
+  - "Fedora33"
+  - "Fedora35"
+  - "Fedora36"
+  - "Debian10"
+  - "Debian11"
+  - "MacOSX12"
+
+# Multiplatform packages
+dops_tfsec_profiles:
+  brew:
+    latest:
+      supported: true
+      packages:
+        - name: "tfsec"
+
+# Define common paths
+dops_tfsec_base:
+  run:
+    tfsec: "{{ (ansible_distribution == 'MacOSX') | ternary('/opt/homebrew/bin/tfsec', '/home/linuxbrew/.linuxbrew/bin/tfsec') }}"
+...

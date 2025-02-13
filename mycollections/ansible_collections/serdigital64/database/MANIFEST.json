@@ -1,0 +1,34 @@
+{
+ "collection_info": {
+  "namespace": "serdigital64",
+  "name": "database",
+  "version": "2.1.5",
+  "authors": [
+   "SerDigital64 <https://github.com/serdigital64>"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "database"
+  ],
+  "description": "Ansible Roles for automating database tools provisioning.",
+  "license": [
+   "Apache-2.0"
+  ],
+  "license_file": null,
+  "dependencies": {
+   "serdigital64.system": "*"
+  },
+  "repository": "https://github.com/aplatform64/aplatform64",
+  "documentation": "https://aplatform64.readthedocs.io",
+  "homepage": "https://github.com/aplatform64/aplatform64",
+  "issues": "https://github.com/aplatform64/aplatform64/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "5d27b68a1f98ec0238b5d4b14ab1526547e054022a40b62da267d01d5d585a36",
+  "format": 1
+ },
+ "format": 1
+}

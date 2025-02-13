@@ -1,0 +1,20 @@
+---
+dops_batscore_repository_custom_yum: []
+dops_batscore_repository_custom_apt: []
+
+dops_batscore_repository_catalog_distro: {}
+dops_batscore_repository_catalog_yum: {}
+dops_batscore_repository_catalog_apt: {}
+
+dops_batscore_base:
+  paths: "{{ dops_batscore_base_common['paths'] }}"
+  run: "{{ dops_batscore_base_common['run'] }}"
+  access:
+    user:
+      owner: "root"
+    group:
+      owner: "wheel"
+    mode:
+      dir: "0755"
+      exe: "0755"
+...

@@ -1,0 +1,5 @@
+---
+dops_tfsec:
+  resolve_prereq: false
+  deploy: false
+...

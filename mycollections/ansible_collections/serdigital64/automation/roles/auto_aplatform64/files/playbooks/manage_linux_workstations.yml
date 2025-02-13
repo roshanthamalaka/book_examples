@@ -1,0 +1,190 @@
+---
+- name: "Manage Linux Workstations"
+  hosts: "linux_workstations"
+  gather_facts: false
+
+  pre_tasks:
+    - name: "Manage Linux Workstations / Discover Target Platform"
+      ansible.builtin.setup:
+        gather_subset: "min"
+
+    - name: "Manage Linux Workstations / Prepare package repositories"
+      vars:
+        sys_repository:
+          prepare: true
+          deploy: true
+          setup: true
+          provision: true
+      ansible.builtin.include_role:
+        name: "serdigital64.system.sys_repository"
+
+    - name: "Manage Linux Workstations / Prepare archive manager"
+      vars:
+        bkp_archive:
+          deploy: true
+      ansible.builtin.include_role:
+        name: "serdigital64.backup.bkp_archive"
+
+    - name: "Manage Linux Workstations / Prepare package installer"
+      vars:
+        sys_package:
+          prepare: true
+      ansible.builtin.include_role:
+        name: "serdigital64.system.sys_package"
+
+  tasks:
+
+    - name: "Manage Linux Workstations / Provision OpenSSH server"
+      vars:
+        sec_openssh_server:
+          deploy: true
+      ansible.builtin.include_role:
+        name: "serdigital64.security.sec_openssh_server"
+      when:
+        - linux_workstations_component['openssh_server'] is defined
+        - linux_workstations_component['openssh_server']
+
+    - name: "Manage Linux Workstations / Provision Docker"
+      vars:
+        cnt_docker:
+          deploy: true
+      ansible.builtin.include_role:
+        name: "serdigital64.container.cnt_docker"
+      when:
+        - linux_workstations_component['docker'] is defined
+        - linux_workstations_component['docker']
+
+    - name: "Manage Linux Workstations / Provision Podman"
+      vars:
+        cnt_podman:
+          deploy: true
+      ansible.builtin.include_role:
+        name: "serdigital64.container.cnt_podman"
+      when:
+        - linux_workstations_component['podman'] is defined
+        - linux_workstations_component['podman']
+
+    - name: "Manage Linux Workstations / Provision NFS client"
+      vars:
+        stg_nfs_client:
+          deploy: true
+      ansible.builtin.include_role:
+        name: "serdigital64.storage.stg_nfs_client"
+      when:
+        - linux_workstations_component['autofs'] is defined
+        - linux_workstations_component['autofs']
+
+    - name: "Manage Linux Workstations / Provision AutoFS"
+      vars:
+        stg_autofs:
+          prepare: true
+          deploy: true
+          control: true
+          setup: true
+          provision: true
+      ansible.builtin.include_role:
+        name: "serdigital64.storage.stg_autofs"
+      when:
+        - linux_workstations_component['autofs'] is defined
+        - linux_workstations_component['autofs']
+
+    - name: "Manage Linux Workstations / Provision fonts"
+      vars:
+        sys_fonts:
+          prepare: true
+          deploy: true
+      ansible.builtin.include_role:
+        name: "serdigital64.system.sys_fonts"
+      when:
+        - linux_workstations_component['fonts'] is defined
+        - linux_workstations_component['fonts']
+
+    - name: "Manage Linux Workstations / Provision unix users and groups"
+      vars:
+        sys_user:
+          setup: true
+      ansible.builtin.include_role:
+        name: "serdigital64.system.sys_user"
+      when:
+        - linux_workstations_component['users'] is defined
+        - linux_workstations_component['users']
+
+    - name: "Manage Linux Workstations / Provision unix shells"
+      vars:
+        sys_shell:
+          deploy: true
+          setup: true
+      ansible.builtin.include_role:
+        name: "serdigital64.system.sys_shell"
+      when:
+        - linux_workstations_component['shell'] is defined
+        - linux_workstations_component['shell']
+
+    - name: "Manage Linux Workstations / Deploy and configure SUDO"
+      vars:
+        sys_sudo:
+          deploy: true
+          setup: true
+      ansible.builtin.include_role:
+        name: "serdigital64.system.sys_sudo"
+      when:
+        - linux_workstations_component['sudo'] is defined
+        - linux_workstations_component['sudo']
+
+    - name: "Manage Linux Workstations / Provision OpenSSH client"
+      vars:
+        sec_openssh_client:
+          deploy: true
+      ansible.builtin.include_role:
+        name: "serdigital64.security.sec_openssh_client"
+      when:
+        - linux_workstations_component['openssh_client'] is defined
+        - linux_workstations_component['openssh_client']
+
+    - name: "Manage Linux Workstations / Provision DConf service"
+      vars:
+        sys_dconf:
+          prepare: true
+          deploy: true
+          setup: true
+      ansible.builtin.include_role:
+        name: "serdigital64.system.sys_dconf"
+      when:
+        - linux_workstations_component['dconf'] is defined
+        - linux_workstations_component['dconf']
+
+    - name: "Manage Linux Workstations / Provision Cinnamon desktop manager"
+      vars:
+        sys_gui_cinnamon:
+          prepare: true
+          deploy: true
+          provision: true
+      ansible.builtin.include_role:
+        name: "serdigital64.system.sys_gui_cinnamon"
+      when:
+        - linux_workstations_component['cinnamon'] is defined
+        - linux_workstations_component['cinnamon']
+
+    - name: "Manage Linux Workstations / Provision MC tool"
+      vars:
+        sys_mc:
+          deploy: true
+          setup: true
+      ansible.builtin.include_role:
+        name: "serdigital64.system.sys_mc"
+      when:
+        - linux_workstations_component['mc'] is defined
+        - linux_workstations_component['mc']
+
+    - name: "Manage Linux Workstations / Provision Tilix tool"
+      vars:
+        app_tilix:
+          prepare: true
+          deploy: true
+          setup: true
+      ansible.builtin.include_role:
+        name: "serdigital64.application.app_tilix"
+      when:
+        - linux_workstations_component['tilix'] is defined
+        - linux_workstations_component['tilix']
+...

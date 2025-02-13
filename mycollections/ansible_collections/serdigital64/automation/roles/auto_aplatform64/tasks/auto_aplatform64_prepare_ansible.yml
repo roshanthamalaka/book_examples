@@ -1,0 +1,24 @@
+---
+- name: "Automation / A:Platform64 / Prepare / Ansible / Configure control node"
+  vars:
+    auto_ansible_control:
+      resolve_prereq: true
+      prepare: true
+      setup: true
+    auto_ansible_control_paths: "{{ auto_aplatform64_paths['control'] }}"
+    auto_ansible_control_owners: "{{ auto_aplatform64_owners }}"
+    auto_ansible_control_site: "{{ auto_aplatform64_site }}"
+    auto_ansible_control_node: "{{ auto_aplatform64_node }}"
+    auto_ansible_control_python: "{{ auto_aplatform64_python }}"
+  ansible.builtin.include_role:
+    name: "serdigital64.automation.auto_ansible_control"
+
+- name: "Automation / A:Platform64 / Prepare / Ansible / Configure managed node"
+  vars:
+    auto_ansible_node:
+      prepare: true
+    auto_ansible_node_paths: "{{ auto_aplatform64_paths['node'] }}"
+    auto_ansible_node_owners: "{{ auto_aplatform64_owners }}"
+  ansible.builtin.include_role:
+    name: "serdigital64.automation.auto_ansible_node"
+...

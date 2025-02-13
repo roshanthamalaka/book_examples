@@ -1,0 +1,8 @@
+download_url: https://galaxy.ansible.com/api/v3/plugin/ansible/content/published/collections/artifacts/serdigital64-security-2.1.6.tar.gz
+format_version: 1.0.0
+name: security
+namespace: serdigital64
+server: https://galaxy.ansible.com/api/
+signatures: []
+version: 2.1.6
+version_url: /api/v3/plugin/ansible/content/published/collections/index/serdigital64/security/versions/2.1.6/

@@ -1,0 +1,15 @@
+---
+- name: "DevOps / GIT / Client / Deploy / Check required parameters"
+  ansible.builtin.assert:
+    fail_msg: "Required end-state parameters are missing ({{ dops_git_client_application | default('dops_git_client_application') }})"
+    quiet: true
+    that:
+      - dops_git_client_application is defined
+      - dops_git_client_application | length > 0
+
+- name: "DevOps / GIT / Client / Deploy / Package"
+  ansible.builtin.include_tasks:
+    file: "dops_git_client_deploy_package.yml"
+  when:
+    - ansible_system == "Linux"
+...

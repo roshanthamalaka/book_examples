@@ -1,0 +1,31 @@
+---
+- name: "Automation / Ansible / Node / Initialize / Discover Target Platform"
+  ansible.builtin.setup:
+    gather_subset: "min"
+    gather_timeout: "5"
+
+- name: "Automation / Ansible / Node / Initialize / Check Platform compatibility ({{
+    ansible_distribution + ansible_distribution_major_version }})"
+  ansible.builtin.assert:
+    quiet: true
+    fail_msg: "Target Platform not supported: {{ ansible_distribution + ansible_distribution_major_version }}"
+    that:
+      - ansible_distribution + ansible_distribution_major_version in auto_ansible_node_platforms
+
+- name: "Automation / Ansible / Node / Initialize / Check required parameters"
+  ansible.builtin.assert:
+    fail_msg: "required parameters are missing ({{
+      auto_ansible_node_owners | default('auto_ansible_node_owners') }} ' / ' {{
+      auto_ansible_node_paths | default('auto_ansible_node_paths')
+      }})"
+    quiet: true
+    that:
+      - auto_ansible_node_owners is defined
+      - auto_ansible_node_owners['node']['user'] is defined
+      - auto_ansible_node_owners['node']['user'] | length > 0
+      - auto_ansible_node_owners['node']['group'] is defined
+      - auto_ansible_node_owners['node']['group'] | length > 0
+      - auto_ansible_node_paths is defined
+      - auto_ansible_node_paths['var'] is defined
+      - auto_ansible_node_paths['var'] | length > 0
+...

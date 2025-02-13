@@ -1,0 +1,145 @@
+---
+dops_batscore_platforms:
+  - "CentOS8"
+  - "RedHat8"
+  - "AlmaLinux8"
+  - "Rocky8"
+  - "OracleLinux8"
+  - "OracleLinux9"
+  - "Ubuntu20"
+  - "Ubuntu21"
+  - "Ubuntu22"
+  - "Fedora33"
+  - "Fedora35"
+  - "Fedora36"
+  - "Debian10"
+  - "Debian11"
+  - "MacOSX12"
+
+dops_batscore_os_family: >-
+  {%- if
+      ( ansible_distribution == 'CentOS' ) or
+      ( ansible_distribution == 'RedHat' ) or
+      ( ansible_distribution == 'AlmaLinux' ) or
+      ( ansible_distribution == 'Rocky' ) or
+      ( ansible_distribution == 'OracleLinux' ) or
+      ( ansible_distribution == 'Fedora' )
+  -%}
+    {{ 'RedHat' }}
+  {%- elif
+      ( ansible_distribution == 'Debian' ) or
+      ( ansible_distribution == 'Ubuntu' )
+  -%}
+    {{ 'Ubuntu' }}
+  {%- elif
+      ( ansible_distribution == 'MacOSX' )
+  -%}
+    {{ 'MacOSX' }}
+  {%- else -%}
+    {{ 'NotSupported' }}
+  {%- endif -%}
+
+dops_batscore_base_common:
+  paths:
+    root: "/opt/bats-core"
+    bin: "/opt/bats-core/bin"
+    lib: "/opt/bats-core/lib"
+    libexec: "/opt/bats-core/libexec"
+    plugins: "/opt/bats-core/test_helpers"
+    assert: "/opt/bats-core/test_helpers/assert"
+    file: "/opt/bats-core/test_helpers/file"
+    support: "/opt/bats-core/test_helpers/support"
+  run:
+    bats: "/opt/bats-core/bin/bats"
+
+dops_batscore_plugins:
+  assert:
+    name: "assert"
+    type: "git"
+    version: "latest"
+    installed: "{{ dops_batscore_application['installed'] }}"
+  file:
+    name: "file"
+    type: "git"
+    version: "latest"
+    installed: "{{ dops_batscore_application['installed'] }}"
+  support:
+    name: "support"
+    type: "git"
+    version: "latest"
+    installed: "{{ dops_batscore_application['installed'] }}"
+
+dops_batscore_profiles:
+  core:
+    git:
+      v1_5:
+        origin: "https://github.com/bats-core"
+        packages:
+          - file: "bats-core.git"
+            git:
+              branch: "v1.5.0"
+        promotion:
+          - source: "bats-core/bin/bats"
+            target: "{{ dops_batscore_base['paths']['bin'] }}"
+            owner: "{{ dops_batscore_base['access']['user']['owner'] }}"
+            group: "{{ dops_batscore_base['access']['group']['owner'] }}"
+            mode: "{{ dops_batscore_base['access']['mode']['exe'] }}"
+          - source: "bats-core/lib/bats-core"
+            target: "{{ dops_batscore_base['paths']['lib'] }}"
+            owner: "{{ dops_batscore_base['access']['user']['owner'] }}"
+            group: "{{ dops_batscore_base['access']['group']['owner'] }}"
+          - source: "bats-core/libexec/bats-core"
+            target: "{{ dops_batscore_base['paths']['libexec'] }}"
+            owner: "{{ dops_batscore_base['access']['user']['owner'] }}"
+            group: "{{ dops_batscore_base['access']['group']['owner'] }}"
+  support:
+    git:
+      latest:
+        origin: "https://github.com/bats-core"
+        packages:
+          - file: "bats-support.git"
+        promotion:
+          - source: "bats-support/load.bash"
+            target: "{{ dops_batscore_base['paths']['support'] }}"
+            owner: "{{ dops_batscore_base['access']['user']['owner'] }}"
+            group: "{{ dops_batscore_base['access']['group']['owner'] }}"
+            mode: "{{ dops_batscore_base['access']['mode']['exe'] }}"
+          - source: "bats-support/src"
+            target: "{{ dops_batscore_base['paths']['support'] }}"
+            owner: "{{ dops_batscore_base['access']['user']['owner'] }}"
+            group: "{{ dops_batscore_base['access']['group']['owner'] }}"
+  file:
+    git:
+      latest:
+        origin: "https://github.com/bats-core"
+        packages:
+          - file: "bats-file.git"
+        promotion:
+          - source: "bats-file/load.bash"
+            target: "{{ dops_batscore_base['paths']['file'] }}"
+            owner: "{{ dops_batscore_base['access']['user']['owner'] }}"
+            group: "{{ dops_batscore_base['access']['group']['owner'] }}"
+            mode: "{{ dops_batscore_base['access']['mode']['exe'] }}"
+          - source: "bats-file/src"
+            target: "{{ dops_batscore_base['paths']['file'] }}"
+            owner: "{{ dops_batscore_base['access']['user']['owner'] }}"
+            group: "{{ dops_batscore_base['access']['group']['owner'] }}"
+  assert:
+    git:
+      latest:
+        origin: "https://github.com/bats-core"
+        packages:
+          - file: "bats-assert.git"
+        promotion:
+          - source: "bats-assert/load.bash"
+            target: "{{ dops_batscore_base['paths']['assert'] }}"
+            owner: "{{ dops_batscore_base['access']['user']['owner'] }}"
+            group: "{{ dops_batscore_base['access']['group']['owner'] }}"
+            mode: "{{ dops_batscore_base['access']['mode']['exe'] }}"
+          - source: "bats-assert/src"
+            target: "{{ dops_batscore_base['paths']['assert'] }}"
+            owner: "{{ dops_batscore_base['access']['user']['owner'] }}"
+            group: "{{ dops_batscore_base['access']['group']['owner'] }}"
+
+#dops_batscore___prepare_path: ~
+...

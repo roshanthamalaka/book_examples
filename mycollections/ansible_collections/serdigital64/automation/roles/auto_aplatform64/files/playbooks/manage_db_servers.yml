@@ -1,0 +1,97 @@
+---
+- name: "Manage db servers"
+  hosts: "db_servers"
+  gather_facts: false
+
+  pre_tasks:
+
+    - name: "Manage db servers / Discover Target Platform"
+      ansible.builtin.setup:
+        gather_subset: "min"
+
+    - name: "Manage db servers / Prepare package repositories"
+      vars:
+        sys_repository:
+          prepare: true
+          deploy: true
+          setup: true
+          provision: true
+      ansible.builtin.include_role:
+        name: "serdigital64.system.sys_repository"
+
+    - name: "Manage db servers / Prepare archive manager"
+      vars:
+        bkp_archive:
+          deploy: true
+      ansible.builtin.include_role:
+        name: "serdigital64.backup.bkp_archive"
+
+    - name: "Manage db servers / Prepare package installer"
+      vars:
+        sys_package:
+          prepare: true
+      ansible.builtin.include_role:
+        name: "serdigital64.system.sys_package"
+
+  tasks:
+
+    - name: "Manage db servers / Provision MariaDB server"
+      vars:
+        db_mariadb_server:
+          deploy: true
+      ansible.builtin.include_role:
+        name: "serdigital64.database.db_mariadb_server"
+      when:
+        - db_servers_apps['mariadb_server'] is defined
+        - db_servers_apps['mariadb_server']
+
+    - name: "Manage db servers / Provision MariaDB client"
+      vars:
+        db_mariadb_client:
+          deploy: true
+      ansible.builtin.include_role:
+        name: "serdigital64.database.db_mariadb_client"
+      when:
+        - db_clients_apps['mariadb_client'] is defined
+        - db_clients_apps['mariadb_client']
+
+    - name: "Manage db servers / Provision MySQL server"
+      vars:
+        db_mysql_server:
+          deploy: true
+      ansible.builtin.include_role:
+        name: "serdigital64.database.db_mysql_server"
+      when:
+        - db_servers_apps['mysql_server'] is defined
+        - db_servers_apps['mysql_server']
+
+    - name: "Manage db servers / Provision MySQL client"
+      vars:
+        db_mysql_client:
+          deploy: true
+      ansible.builtin.include_role:
+        name: "serdigital64.database.db_mysql_client"
+      when:
+        - db_clients_apps['mysql_client'] is defined
+        - db_clients_apps['mysql_client']
+
+    - name: "Manage db servers / Provision PostgreSQL server"
+      vars:
+        db_postgresql_server:
+          deploy: true
+      ansible.builtin.include_role:
+        name: "serdigital64.database.db_postgresql_server"
+      when:
+        - db_servers_apps['postgresql_server'] is defined
+        - db_servers_apps['postgresql_server']
+
+    - name: "Manage db servers / Provision PostgreSQL client"
+      vars:
+        db_postgresql_client:
+          deploy: true
+      ansible.builtin.include_role:
+        name: "serdigital64.database.db_postgresql_client"
+      when:
+        - db_clients_apps['postgresql_client'] is defined
+        - db_clients_apps['postgresql_client']
+...

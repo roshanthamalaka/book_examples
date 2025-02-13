@@ -1,0 +1,26 @@
+---
+dev_python_base:
+  files: "{{ dev_python_base_common['files'] }}"
+  access:
+    user:
+      owner: "root"
+    group:
+      owner: "wheel"
+    mode:
+      dir: "0755"
+      file: "0644"
+  run:
+    python_3_8: &dev_python_base_run_python_3_8
+      "/usr/bin/python3"
+    python_latest: *dev_python_base_run_python_3_8
+    python_defaul: *dev_python_base_run_python_3_8
+
+dev_python_profiles: {}
+
+dev_python_repository_custom_yum: []
+dev_python_repository_custom_apt: []
+
+dev_python_repository_catalog_distro: {}
+dev_python_repository_catalog_yum: {}
+dev_python_repository_catalog_apt: {}
+...

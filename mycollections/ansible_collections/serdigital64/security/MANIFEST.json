@@ -1,0 +1,38 @@
+{
+ "collection_info": {
+  "namespace": "serdigital64",
+  "name": "security",
+  "version": "2.1.6",
+  "authors": [
+   "SerDigital64 <https://github.com/serdigital64>"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "system",
+   "security"
+  ],
+  "description": "Ansible Roles for automating security tools provisioning",
+  "license": [
+   "Apache-2.0"
+  ],
+  "license_file": null,
+  "dependencies": {
+   "serdigital64.backup": "*",
+   "serdigital64.system": "*",
+   "ansible.posix": "*",
+   "community.crypto": "*"
+  },
+  "repository": "https://github.com/aplatform64/aplatform64",
+  "documentation": "https://aplatform64.readthedocs.io",
+  "homepage": "https://github.com/aplatform64/aplatform64",
+  "issues": "https://github.com/aplatform64/aplatform64/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "d3bdc8ae99f1ecaad0b5ed81b4bd0a4a115be6b410ed993e9ec02002865a2127",
+  "format": 1
+ },
+ "format": 1
+}

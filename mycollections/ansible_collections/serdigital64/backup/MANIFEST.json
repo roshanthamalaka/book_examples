@@ -1,0 +1,35 @@
+{
+ "collection_info": {
+  "namespace": "serdigital64",
+  "name": "backup",
+  "version": "2.1.5",
+  "authors": [
+   "SerDigital64 <https://github.com/serdigital64>"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "backup",
+   "system"
+  ],
+  "description": "Ansible Roles for automating backup tools provisioning",
+  "license": [
+   "Apache-2.0"
+  ],
+  "license_file": null,
+  "dependencies": {
+   "serdigital64.system": "*"
+  },
+  "repository": "https://github.com/aplatform64/aplatform64",
+  "documentation": "https://aplatform64.readthedocs.io",
+  "homepage": "https://github.com/aplatform64/aplatform64",
+  "issues": "https://github.com/aplatform64/aplatform64/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "7cf506cabbb55fd50079a8028f757a5bd96d5fe6b64cc4c28214b27e2ae7804c",
+  "format": 1
+ },
+ "format": 1
+}

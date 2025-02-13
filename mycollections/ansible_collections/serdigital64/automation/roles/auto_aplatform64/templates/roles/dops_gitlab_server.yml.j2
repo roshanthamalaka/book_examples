@@ -1,0 +1,17 @@
+---
+#
+# A:Platform64 / Ansible role settings / Site: {{ auto_ansible_control_site }}
+#
+# * Role settings are available only for the corresponding host group and associated playbook
+#
+
+dops_gitlab_server_subsystem:
+  enabled: true
+  status: "started"
+
+dops_gitlab_server_firewall:
+  zone: "public"
+
+dops_gitlab_server_server:
+  external_url: "gitlab.localdomain"
+...

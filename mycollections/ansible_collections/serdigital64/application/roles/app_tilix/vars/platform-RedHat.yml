@@ -1,0 +1,23 @@
+---
+app_tilix_base:
+  access: "{{ app_tilix_base_common['access'] }}"
+  templates: "{{ app_tilix_base_common['templates'] }}"
+  etc: "{{ app_tilix_base_common['etc'] }}"
+  files: "{{ app_tilix_base_common['files'] }}"
+  run: "{{ app_tilix_base_common['run'] }}"
+  paths: "{{ app_tilix_base_common['paths'] }}"
+
+app_tilix_profiles:
+  distro:
+    latest:
+      supported: true
+      packages:
+        - name: "tilix"
+
+app_tilix_repository_custom_yum: []
+app_tilix_repository_custom_apt: []
+
+app_tilix_repository_catalog_distro: {}
+app_tilix_repository_catalog_yum: {}
+app_tilix_repository_catalog_apt: {}
+...

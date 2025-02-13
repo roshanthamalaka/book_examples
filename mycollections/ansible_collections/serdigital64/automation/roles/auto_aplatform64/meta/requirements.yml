@@ -1,0 +1,7 @@
+---
+roles: []
+collections:
+  - "community.general.ini_file"
+  - "serdigital64.application"
+  - "serdigital64.system"
+...

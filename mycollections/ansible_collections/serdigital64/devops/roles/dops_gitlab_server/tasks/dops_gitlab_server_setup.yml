@@ -1,0 +1,25 @@
+---
+- name: "DevOps / GitLab / Server / Setup / Check required parameters"
+  ansible.builtin.assert:
+    fail_msg: "Required end-state parameters are missing ({{
+      dops_gitlab_server_firewall | default('dops_gitlab_server_firewall') }} / {{
+      dops_gitlab_server_server | default('dops_gitlab_server_server') }})"
+    quiet: true
+    that:
+      - dops_gitlab_server_firewall is defined
+      - dops_gitlab_server_firewall['zone'] is defined
+      - dops_gitlab_server_firewall['zone'] | length > 0
+      - dops_gitlab_server_server is defined
+      - dops_gitlab_server_server['external_url'] is defined
+      - dops_gitlab_server_server['external_url'] | length > 0
+
+- name: "DevOps / GitLab / Server / Setup / Server"
+  ansible.builtin.include_tasks:
+    file: "dops_gitlab_server_setup_server.yml"
+  when:
+    - dops_gitlab_server_server is defined
+
+- name: "DevOps / GitLab / Server / Setup / Firewall"
+  ansible.builtin.include_tasks:
+    file: "dops_gitlab_server_setup_firewall.yml"
+...

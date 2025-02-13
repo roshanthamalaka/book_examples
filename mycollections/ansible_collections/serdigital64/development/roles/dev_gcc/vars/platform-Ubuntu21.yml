@@ -1,0 +1,20 @@
+---
+dev_gcc_profiles:
+  distro:
+    v9:
+      packages:
+        - name: "gcc-9"
+        - name: "g++-9"
+        - name: "cpp-9"
+    v10:
+      packages:
+        - name: "gcc-10"
+        - name: "g++-10"
+        - name: "cpp-10"
+    v11: &dev_gcc_profiles_distro_v11
+      packages:
+        - name: "gcc-11"
+        - name: "g++-11"
+        - name: "cpp-11"
+    latest: *dev_gcc_profiles_distro_v11
+...

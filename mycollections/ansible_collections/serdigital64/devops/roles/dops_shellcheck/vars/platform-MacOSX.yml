@@ -1,0 +1,23 @@
+---
+# Define platform specific paths
+dops_shellcheck_base:
+  run:
+    brew:
+      shellcheck: "/opt/homebrew/bin/shellcheck"
+
+# Define application package details
+dops_shellcheck_profiles:
+  brew: "{{ dops_shellcheck_profiles_common['brew'] }}"
+  snap: "{{ dops_shellcheck_profiles_common['snap'] }}"
+  flatpak: "{{ dops_shellcheck_profiles_common['flatpak'] }}"
+  distro: {}
+
+# Define custom package repositories
+dops_shellcheck_repository_custom_yum: []
+dops_shellcheck_repository_custom_apt: []
+
+# Set package repositories states
+dops_shellcheck_repository_catalog_distro: {}
+dops_shellcheck_repository_catalog_yum: {}
+dops_shellcheck_repository_catalog_apt: {}
+...

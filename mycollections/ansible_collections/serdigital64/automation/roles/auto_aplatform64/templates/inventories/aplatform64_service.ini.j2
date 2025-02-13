@@ -1,0 +1,31 @@
+#
+# A:Platform64 / Ansible Inventory / Site: {{ auto_ansible_control_site }}
+#
+# * Do not modify group names
+#
+
+#
+# A:Platform64 servers
+#
+# : Linux nodes providing A:Platform64 services
+#
+# * localhost must be always present
+#
+# Playbooks using this group:
+#   - manage_aplatform64_servers
+#
+[aplatform64_servers]
+localhost
+
+#
+# A:Platform64 Nodes
+#
+# : Linux nodes that are already prepared for A:Platform64
+#
+# * localhost must be always present
+#
+# Playbooks using this group:
+#   - manage_aplatform64_nodes
+#
+[aplatform64_nodes]
+localhost

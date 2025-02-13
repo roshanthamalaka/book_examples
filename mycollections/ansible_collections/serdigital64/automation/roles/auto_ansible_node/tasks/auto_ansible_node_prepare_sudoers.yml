@@ -1,0 +1,13 @@
+---
+- name: "Automation / Ansible / Node / Prepare / Sudoers / Grant root privilege to managed node user"
+  vars:
+    sys_sudo:
+      setup: true
+    sys_sudo_rules:
+      user:
+        - name: "{{ auto_ansible_node_base['access']['user']['owner'] }}"
+          rule: "ALL=(ALL) NOPASSWD: ALL"
+          present: true
+  ansible.builtin.include_role:
+    name: "serdigital64.system.sys_sudo"
+...

@@ -1,0 +1,7 @@
+---
+- name: Posix Collection Usage Example 
+  hosts: node1
+  tasks: 
+      - name: Disable SELinux
+        ansible.posix.selinux:
+          state: disabled
