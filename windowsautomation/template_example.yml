@@ -1,0 +1,8 @@
+---
+- name: Use of Jinja Templates and Facts Example 
+  hosts: winvm
+  tasks: 
+      - name: Deploy Jinja Template  
+        ansible.windows.win_template:
+            src: host.j2
+            dest: C:\DemoFolder\host.txt
