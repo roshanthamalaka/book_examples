@@ -1,0 +1,10 @@
+[winvm]
+172.16.0.7
+
+[winvm:vars]
+ansible_user=roshan
+ansible_password=Add_Your_Password_here
+ansible_connection=winrm
+ansible_winrm_transport=basic
+ansible_winrm_server_cert_validation=ignore
+                                            

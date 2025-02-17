@@ -1,0 +1,27 @@
+---
+- name: Example Windows Playbook
+  hosts: winvm
+  vars_files: 
+     - pwd.yml # This File was encrypted with Ansible Vault 
+  tasks:
+      - name: Create User Account 
+        ansible.windows.win_user:
+          name: demoansible
+          password: "{{ userpwd }}" # Password From Variable
+          groups: 
+             - Remote Desktop Users # IF the Server is Remote Server  and New User is created if not added to this group can't RDP to the server
+          state: present
+
+      - name : Set hostname for the server
+        ansible.windows.win_hostname:
+            name: windemohost
+        register: result
+
+      - name: Print the Hostname Change Result 
+        ansible.builtin.debug:
+          var: result
+
+      - name: Reboot the Server if Required to apply hostname change 
+        ansible.windows.win_reboot:
+        when: result.reboot_required
+
