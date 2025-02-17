@@ -1,0 +1,13 @@
+---
+- name: Example of Creating Files and directories with Ansible 
+  hosts: winvm 
+  tasks: 
+     - name: Create Folder in C drive  
+       ansible.windows.win_file:
+          path: C:\DemoFolder
+          state: directory 
+
+     - name: Create Empty Text File in the DemoFolder 
+       ansible.windows.win_file:
+          path: C:\DemoFolder\emptyfile.txt
+          state: touch
