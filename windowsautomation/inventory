@@ -7,4 +7,12 @@ ansible_winrm_transport=certificate
 ansible_winrm_cert_pem=cert.pem
 ansible_winrm_cert_key_pem=cert_key.pem
 ansible_winrm_server_cert_validation=ignore
-                                            
+
+
+### When using Basic Authentication Use below configs
+
+#ansible_user=roshan
+#ansible_password=Thamalaka@123
+#ansible_connection=winrm
+#ansible_winrm_transport=basic
+#ansible_winrm_server_cert_validation=ignore                                            
