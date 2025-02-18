@@ -1,0 +1,19 @@
+---
+- name: Use of PowerShell Module 
+  hosts: winvm
+  tasks: 
+      - name: Install Chocolatey 
+        ansible.windows.win_powershell:
+          script: |
+            Write-Host "Installing Chocolatey"
+            Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+      - name: Verify Chocolatey Installation 
+        ansible.windows.win_powershell:
+           script: | 
+              choco -?
+        register: output
+
+      - name: Print the Verification Output
+        ansible.builtin.debug:
+            var: output
