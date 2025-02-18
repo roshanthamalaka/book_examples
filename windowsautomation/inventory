@@ -2,9 +2,9 @@
 172.16.0.7
 
 [winvm:vars]
-ansible_user=roshan
-ansible_password=Add_Your_Password_here
 ansible_connection=winrm
-ansible_winrm_transport=basic
+ansible_winrm_transport=certificate
+ansible_winrm_cert_pem=cert.pem
+ansible_winrm_cert_key_pem=cert_key.pem
 ansible_winrm_server_cert_validation=ignore
                                             
