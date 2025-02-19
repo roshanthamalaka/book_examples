@@ -1,0 +1,12 @@
+--- 
+- name: Create AWS VPC with Subnet and Intetnet Gateway Example 
+  hosts: localhost
+  tasks: 
+    - name: Create VPC 
+      amazon.aws.ec2_vpc_net:
+          name: Ansible-demo-vpc
+          profile: development-acc
+          region: ap-southeast-2 
+          state: present 
+          tenancy: default 
+          cidr_block: 172.16.0.0/16
