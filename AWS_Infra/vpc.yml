@@ -5,8 +5,45 @@
     - name: Create VPC 
       amazon.aws.ec2_vpc_net:
           name: Ansible-demo-vpc
-          profile: development-acc
-          region: ap-southeast-2 
           state: present 
           tenancy: default 
           cidr_block: 172.16.0.0/16
+      register: demovpc
+
+    - name: Print VPC infor
+      ansible.builtin.debug: 
+           msg: "{{ demovpc }}"
+
+    - name: Create Public Subnet
+      amazon.aws.ec2_vpc_subnet:
+            state: present
+            vpc_id: "{{ demovpc.vpc.id }}" 
+            cidr: 172.16.0.0/24 
+            tags: 
+                Name: Public_Subnet
+      register: demo_vpc_public_subnet
+
+    - name: Create Private Subnet 
+      amazon.aws.ec2_vpc_subnet:
+            state: present
+            vpc_id: "{{ demovpc.vpc.id }}"
+            cidr: 172.16.1.0/24
+            tags: 
+                Name: Private_Subnet
+      register: demo_vpc_private_subnet
+
+    - name: Create Internet Gateway
+      amazon.aws.ec2_vpc_igw:
+        vpc_id: "{{ demovpc.vpc.id }}"
+        state: present
+        tags: 
+          Name: Demo-VPC-IGW
+      register: demovpc_igw
+
+    - name: Create NAT Gateway and allocate Elastic IP 
+      amazon.aws.ec2_vpc_nat_gateway:
+        state: present
+        subnet_id: "{{ demo_vpc_public_subnet.subnet.id }}"
+        tags: 
+            Name: Demo-VPC-NGW
+      register: demovpc_ngw
