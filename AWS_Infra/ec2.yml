@@ -1,0 +1,81 @@
+--- 
+- name: Server Creation and Security Group Creation
+  hosts: localhost 
+  tasks: 
+      - name: Public EC2 Security Group 
+        amazon.aws.ec2_security_group:
+          name: Public_Subnet_SG
+          description: sg with rule descriptions
+          vpc_id: vpc-0e219781426df45c7
+          rules:
+            - proto: tcp
+              ports:
+                - 22
+              cidr_ip: 0.0.0.0/0
+              rule_desc: Allow SSH from Anywhere 
+          rules_egress: 
+               - proto: tcp 
+                 from_port: 80
+                 to_port: 80 
+                 cidr_ip: 0.0.0.0/0
+                 rule_desc: Allow HTTP Outbound
+               - proto: tcp 
+                 from_port: 443
+                 to_port: 443 
+                 cidr_ip: 0.0.0.0/0
+                 rule_desc: Allow HTTPS Outbound
+        register: Public_EC2_SG
+
+      - name: Private EC2 Security Group 
+        amazon.aws.ec2_security_group:
+          name: Private_Subnet_SG
+          description: sg with rule descriptions
+          vpc_id: vpc-0e219781426df45c7
+          rules:
+            - proto: tcp
+              ports:
+                - 22
+              cidr_ip: 172.16.0.0/16
+              rule_desc: Allow SSH within VPC
+          rules_egress: 
+               - proto: tcp 
+                 from_port: 80
+                 to_port: 80 
+                 cidr_ip: 0.0.0.0/0
+                 rule_desc: Allow HTTP Outbound
+               - proto: tcp 
+                 from_port: 443
+                 to_port: 443 
+                 cidr_ip: 0.0.0.0/0
+                 rule_desc: Allow HTTPS Outbound
+        register: Private_EC2_SG
+
+      - name: create key using our own 
+        amazon.aws.ec2_key:
+          name: demo_key
+          key_material: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDYBUuPgrH1b0CxI0NxkS9UVamwf2fxnOHnkhQPdKcL0MuIZsWwwvjYwGkVOdIAzDNyrIP5nccimkDwM9C2BrO2BnyFt44BABiP+vQuBfUVuX7r1BtDdBGVAAjpLtWnxIhZMkARzaXDm8JIKl44nf6tAC82jGeIrr737Zp3XROcmiX4lqmcL4YQ1+UDjjFryvHdpiVDJUZ6rJ3ne6LmiyDdJipqkTd7sXzbhg580QnMKa6H8JNHudc13+5Mf8n2MG4r9GpLc/lJ78vthhTsnhuQsHmjqoYqoZsRtdPq+wF1H90s7JmMUKeTkG6JbPhH31C7a3BHIkoKjtNkBHGDeFqTVfilqiIXDqrXd57a+zdu/UJ9Ni/rDTvhHsZaK8iswnIyRjgXgBfGeKVwMtKM0uhwjeSeeHKOiSdKLawwacmQ1gGLPvtJ2t2kHpe5tBf7vhQY27nhSVE35YkZ5V8EfvTb/XR6zgpIbcNYcy3TebAraX02QdC+jpt3p5vOj1x+43M= roshan@DESKTOP-667Q43Q' # Place Your Public Key Here
+        register:  ec2_demo_key
+
+      - name: Create EC2 instance in Public Subnet
+        amazon.aws.ec2_instance:
+          name: "public_server"
+          vpc_subnet_id: subnet-0247f705c158a24e7 # Public Subnet 
+          instance_type: t2.micro
+          key_name: "{{ ec2_demo_key.key.name }}"
+          security_group: "{{ Public_EC2_SG.group_id }}"
+          image_id: ami-0b0a3a2350a9877be # AMI ID Amazon Linux
+          network:
+            assign_public_ip: true
+        register: public_ec2
+
+      - name: Create EC2 instance in Private Subnet
+        amazon.aws.ec2_instance:
+          name: "private_server"
+          vpc_subnet_id: subnet-06c6c12a233c5fb0c # Private Subnet 
+          instance_type: t2.micro
+          key_name: "{{ ec2_demo_key.key.name }}"
+          security_group: "{{ Private_EC2_SG.group_id }}"
+          image_id: ami-0b0a3a2350a9877be # AMI ID Amazon Linux
+        register: private_ec2
+          
+          
