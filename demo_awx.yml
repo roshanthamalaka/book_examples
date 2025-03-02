@@ -1,0 +1,10 @@
+---
+- name: AWX Tower Demo
+  hosts: all
+  tasks: 
+      - name: Check Facts 
+        ansible.builtin.setup:
+          filter:
+            - 'ansible_distribution'
+            - 'ansible_machine_id'
+            - 'ansible_*_mb'
