@@ -4,7 +4,7 @@
   tasks: 
       - name: Create a Group
         ansible.builtin.group:
-           name: AWXDevops1
+           name: AWXDevops
            state: present
 
       - name: Create user and Add user to a group 
