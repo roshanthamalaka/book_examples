@@ -1,10 +1,13 @@
 ---
 - name: AWX Tower Demo
-  hosts: all
+  hosts: Node1
   tasks: 
-      - name: Check Facts of the hosts
-        ansible.builtin.setup:
-          filter:
-            - 'ansible_distribution'
-            - 'ansible_machine_id'
-            - 'ansible_*_mb'
+      - name: Create a Group
+        ansible.builtin.group:
+           name: AWXDevops
+           state: present
+
+      - name: Create user and Add user to a group 
+        ansible.builtin.user:
+          name: AWXDemoUser
+          group: AWXDevops
